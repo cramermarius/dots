@@ -33,18 +33,18 @@
 Applications
 * Nordic
 	* https://www.gnome-look.org/p/1267246/
-	* https://github.com/EliverLara/Nordic
-Cursor
+	* https://github.com/EliverLara/Nordic<br/>
+Cursor  
 * Breeze_Snow
-	* sudo apt install breeze-cursor-theme
+	* sudo apt install breeze-cursor-theme<br/>
 Icons
 * Nordic-Folders
 	* https://www.gnome-look.org/p/1267246/
-	* https://github.com/EliverLara/Nordic
+	* https://github.com/EliverLara/Nordic<br/>
 Shell
 * Nordic
 	* https://www.gnome-look.org/p/1267246/
-	* https://github.com/EliverLara/Nordic
+	* https://github.com/EliverLara/Nordic<br/>
 
 ### keyboard
 * Overview Shortcut
@@ -76,17 +76,17 @@ Appearance
 	* None
 * Theme variant
 	* Dark
-* Show the terminal title even if it's the only terminal [OFF]
+* Show the terminal title even if it's the only terminal [OFF]<br/>
 Quake
 * Height 40
-* Width 36
+* Width 36<br/>
 Shortcuts
 * Open preferences
 	* Ctrl + ,
 * Add terminal down
 	* Ctrl + Alt + x
 * Add termminal right
-	* Ctrl + Alt + d
+	* Ctrl + Alt + d<br/>
 Profiles
 * Color scheme
 	* Nord
@@ -101,4 +101,3 @@ Profiles
 	* nord
 		* https://github.com/arcticicestudio/nord-gedit
 		* ~/dotfiles/repo-backups/apps/nord-gedit
-## inkscape-manager
