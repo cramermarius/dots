@@ -1,0 +1,6 @@
+/* User this to override the panel-button padding */
+.reduced-padding {
+    -natural-hpadding: 8px;
+    -minimum-hpadding: 5px;
+}
+

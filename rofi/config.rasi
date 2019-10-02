@@ -1,0 +1,18 @@
+//----------------------
+// Configuration
+//----------------------
+
+configuration {
+    modi:               "drun,run,ssh";
+    cycle:              true;
+    show-icons:         false;
+    matching:           "normal";
+    lines:              8;
+    columns:            1;
+    width:              550;
+    location:           0;
+    padding:            50;
+    font:               "Fire Code Light 10";
+    hide-scrollbar:     true;
+    theme:              "nord";
+}
