@@ -30,21 +30,21 @@
 * cpufreq
 
 ### appearance
-Applications
-* Nordic
-	* https://www.gnome-look.org/p/1267246/
-	* https://github.com/EliverLara/Nordic<br/>
-Cursor  
-* Breeze_Snow
-	* sudo apt install breeze-cursor-theme<br/>
-Icons
-* Nordic-Folders
-	* https://www.gnome-look.org/p/1267246/
-	* https://github.com/EliverLara/Nordic<br/>
-Shell
-* Nordic
-	* https://www.gnome-look.org/p/1267246/
-	* https://github.com/EliverLara/Nordic<br/>
+* Applications
+	* Nordic
+		* https://www.gnome-look.org/p/1267246/
+		* https://github.com/EliverLara/Nordic
+* Cursor  
+	* Breeze_Snow
+		* sudo apt install breeze-cursor-theme
+* Icons
+	* Nordic-Folders
+		* https://www.gnome-look.org/p/1267246/
+		* https://github.com/EliverLara/Nordic
+* Shell
+	* Nordic
+		* https://www.gnome-look.org/p/1267246/
+		* https://github.com/EliverLara/Nordic
 
 ### keyboard
 * Overview Shortcut
@@ -69,32 +69,32 @@ Shell
 	* ~/dotfiles/repo-backups/apps/latex-note-taking/latex-snippets/
 
 ### tilix
-Appearance
-* Window style
-	* Borderless
-* Terminal title style
-	* None
-* Theme variant
-	* Dark
-* Show the terminal title even if it's the only terminal [OFF]<br/>
-Quake
-* Height 40
-* Width 36<br/>
-Shortcuts
-* Open preferences
-	* Ctrl + ,
-* Add terminal down
-	* Ctrl + Alt + x
-* Add termminal right
-	* Ctrl + Alt + d<br/>
-Profiles
-* Color scheme
-	* Nord
-		* https://github.com/arcticicestudio/nord-tilix
-		* ~/dotfiles/repo-backups/apps/nord-tilix
-* misc
-	* https://www.nordtheme.com/docs/ports/dircolors/installation
-	* ~/dotfiles/repo-backups/apps/nord-dircolors
+* Appearance
+	* Window style
+		* Borderless
+	* Terminal title style
+		* None
+	* Theme variant
+		* Dark
+	* Show the terminal title even if it's the only terminal [OFF]
+* Quake
+	* Height 40
+	* Width 36
+* Shortcuts
+	* Open preferences
+		* Ctrl + ,
+	* Add terminal down
+		* Ctrl + Alt + x
+	* Add termminal right
+		* Ctrl + Alt + d
+* Profiles
+	* Color scheme
+		* Nord
+			* https://github.com/arcticicestudio/nord-tilix
+			* ~/dotfiles/repo-backups/apps/nord-tilix
+	* misc
+		* https://www.nordtheme.com/docs/ports/dircolors/installation
+		* ~/dotfiles/repo-backups/apps/nord-dircolors
 
 ### gedit
 * theme
