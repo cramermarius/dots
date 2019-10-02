@@ -34,7 +34,7 @@
 	* Nordic
 		* https://www.gnome-look.org/p/1267246/
 		* https://github.com/EliverLara/Nordic
-* Cursor  
+* Cursor
 	* Breeze_Snow
 		* sudo apt install breeze-cursor-theme
 * Icons
@@ -51,7 +51,7 @@
 	* Right Super
 
 ## applications
-* sudo apt -y install gimp mpd sxiv zathura vim texlive-lang-german texlive-bibtex-extra biber texlive-latex-extra gnome-tweak-tool papirus-icon-theme keepassx s-tui inkscape chromium-browser google-chrome-stable tilix deja-dup duplicity ranger gnome-software npm python3 pdf2svg xclip python-pip python-xlib
+* sudo apt -y install gimp mpv sxiv zathura vim texlive-lang-german texlive-bibtex-extra biber texlive-latex-extra gnome-tweak-tool papirus-icon-theme keepassx s-tui inkscape chromium-browser google-chrome-stable tilix deja-dup duplicity ranger gnome-software npm python3 pdf2svg xclip python-pip python-xlib
 	* maybe: texlive-latex-base
 * sudo snap install spotify insync
 
