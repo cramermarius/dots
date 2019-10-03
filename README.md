@@ -36,6 +36,7 @@ Otherwise Inkscape and KeePassX won't adapt to GTK theme
 	* Nordic
 		* https://www.gnome-look.org/p/1267246/
 		* https://github.com/EliverLara/Nordic
+		* ~/dotfiles/repo-backups/gnome-shell/themes/Nordic*
 * Cursor
 	* Breeze_Snow
 		* sudo apt install breeze-cursor-theme
@@ -43,10 +44,12 @@ Otherwise Inkscape and KeePassX won't adapt to GTK theme
 	* Nordic-Folders
 		* https://www.gnome-look.org/p/1267246/
 		* https://github.com/EliverLara/Nordic
+		* ~/dotfiles/repo-backups/gnome-shell/icons/Nordic-Folders
 * Shell
 	* Nordic
 		* https://www.gnome-look.org/p/1267246/
 		* https://github.com/EliverLara/Nordic
+		* ~/dotfiles/repo-backups/gnome-shell/themes/Nordic*
 
 ### keyboard
 * Overview Shortcut
