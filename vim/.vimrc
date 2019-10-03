@@ -23,7 +23,7 @@ Plug 'vim-scripts/vim-auto-save'
 	let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
 	let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 Plug 'junegunn/goyo.vim'
-	let g:goyo_width = 95
+	let g:goyo_width = 99
     let g:goyo_height = 40
 Plug 'junegunn/limelight.vim'
 Plug 'airblade/vim-gitgutter'
@@ -50,19 +50,34 @@ set foldmethod=manual
 set foldnestmax=10
 set foldlevel=2
 colorscheme nord
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
 augroup remember_folds
     autocmd!
     autocmd BufWinLeave ?* mkview | filetype detect
     autocmd BufWinEnter ?* silent loadview | filetype detect
 augroup END
 
+"Goyo configs
+function! s:goyo_enter()
+	set nu
+	set noshowmode
+	set noshowcmd
+	Limelight
+endfunction
+
+function! s:goyo_leave()
+	set nu
+	Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 "Mappings
-map <C-n> :NERDTreeToggle<CR>
-map <C-y> :tabn<CR>
-map <C-o> :Goyo<CR>
+noremap <C-n> :NERDTreeToggle<CR>
+noremap <C-y> :tabn<CR>
+noremap <C-o> :Goyo<CR>
+noremap <C-t> :UndotreeToggle<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
-nmap <C-p> <Plug>MarkdownPreviewToggle
+nnoremap <C-p> <Plug>MarkdownPreviewToggle
