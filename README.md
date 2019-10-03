@@ -30,6 +30,8 @@
 * cpufreq
 
 ### appearance
+NOTE: put themes and icons in /usr/share/themes/ and /usr/share/icons/, respectively. 
+Otherwise Inkscape and KeePassX won't adapt to GTK theme
 * Applications
 	* Nordic
 		* https://www.gnome-look.org/p/1267246/
