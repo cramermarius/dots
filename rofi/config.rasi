@@ -3,7 +3,7 @@
 //----------------------
 
 configuration {
-    modi:               "drun,window,run,ssh";
+    modi:               "drun,window,run";
     cycle:              true;
     show-icons:         false;
     matching:           "normal";

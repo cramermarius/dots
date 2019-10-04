@@ -34,11 +34,11 @@
     active-foreground:           @foreground;
     selected-active-foreground:  @foreground;
     alternate-active-background: @nord0;
-    bordercolor:                 @nord9;
+    bordercolor:                 @nord7;
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     selected-normal-background:  @nord3;
-    border-color:                @nord9;
+    border-color:                @nord7;
     spacing:                     2;
     separatorcolor:              @blue;
     urgent-background:           @background;
