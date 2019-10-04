@@ -1,5 +1,6 @@
 "Vim configuration file -- Marius Cramer (marcramer@protonmail.com)
 
+
 "Vim-Plug configuration–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 call plug#begin('~/vim/plugged')
 	Plug 'lervag/vimtex'
@@ -12,7 +13,6 @@ call plug#begin('~/vim/plugged')
 	    let g:UltiSnipsExpandTrigger = '<tab>'
 	    let g:UltiSnipsJumpForwardTrigger = '<tab>'
 	    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-	Plug 'scrooloose/nerdtree'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	    let g:airline_theme='deus'
@@ -25,15 +25,20 @@ call plug#begin('~/vim/plugged')
 		let g:goyo_width = 105
 	    let g:goyo_height = 40
 	Plug 'junegunn/limelight.vim'
-	Plug 'airblade/vim-gitgutter' 
+	Plug 'airblade/vim-gitgutter'
+	Plug 'scrooloose/nerdtree'
+		let NERDTreeShowHidden=0
 	Plug 'iamcco/markdown-preview.nvim', {'do':{->mkdp#util#install()}}
 		let g:mkdp_browser = 'firefox'
 		let g:mkdp_preview_options = {
 	    \ 'disable_sync_scroll': 0,
 	    \ 'sync_scroll_type': 'relative',
 	    \ }
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
+
 
 "vim settings–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 set laststatus=2
@@ -45,16 +50,19 @@ set tw=90
 set smartcase
 set hlsearch
 set cursorline
-set foldmethod=manual
+set foldmethod=syntax
 set foldnestmax=10
 set foldlevel=2
 set relativenumber
 set number
-"––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––
+set encoding=UTF-8
+"–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 
 " Theme–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 colorscheme nord
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 
 " Folding behaviour–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 augroup remember_folds
@@ -63,6 +71,13 @@ augroup remember_folds
     autocmd BufWinEnter ?* silent loadview | filetype detect
 augroup END
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+" NERDTree––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 
 "Goyo functions–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 function! s:goyo_enter()
@@ -81,12 +96,12 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
+
 "Mappings–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-noremap <C-n> :NERDTreeToggle<CR>
 noremap <C-y> :tabn<CR>
 noremap <C-o> :Goyo<CR>
-noremap <C-t> :UndotreeToggle<CR>
-nnoremap <C-u> :set hlsearch!<CR>
+noremap <C-x> :NERDTreeToggle<CR>
+nnoremap <C-i> :set hlsearch!<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
