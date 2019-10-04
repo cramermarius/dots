@@ -38,7 +38,6 @@ call plug#end()
 "Editor settings
 set laststatus=2
 set tabstop=4
-set nu
 set showmatch
 set termguicolors
 set noshowmode
@@ -49,6 +48,8 @@ set cursorline
 set foldmethod=manual
 set foldnestmax=10
 set foldlevel=2
+set relativenumber
+set number
 colorscheme nord
 augroup remember_folds
     autocmd!
@@ -77,6 +78,7 @@ noremap <C-n> :NERDTreeToggle<CR>
 noremap <C-y> :tabn<CR>
 noremap <C-o> :Goyo<CR>
 noremap <C-t> :UndotreeToggle<CR>
+nnoremap <C-u> :set hlsearch!<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
