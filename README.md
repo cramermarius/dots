@@ -50,6 +50,8 @@ Otherwise Inkscape and KeePassX won't adapt to GTK theme
 		* https://www.gnome-look.org/p/1267246/
 		* https://github.com/EliverLara/Nordic
 		* ~/dotfiles/repo-backups/gnome-shell/themes/Nordic*
+* rofi config
+	* https://gitlab.kevinhivert.ovh/linux/dot-files/tree/master/rofi
 
 ### keyboard
 * Overview Shortcut
