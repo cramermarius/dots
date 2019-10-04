@@ -102,6 +102,10 @@ Otherwise Inkscape and KeePassX won't adapt to GTK theme
 	* misc
 		* https://www.nordtheme.com/docs/ports/dircolors/installation
 		* ~/dotfiles/repo-backups/apps/nord-dircolors
+	* Font
+		* Hasklug Nerd Font Mono Regular 11
+			* ~/dotfiles/repo-backups/apps/Hasklug Nerd Font Complete Mono.otf
+			* https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hasklig/Regular/complete/Hasklug%20Nerd%20Font%20Complete%20Mono.otf
 
 ### gedit
 * theme
