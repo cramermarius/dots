@@ -23,7 +23,7 @@ Plug 'vim-scripts/vim-auto-save'
 	let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
 	let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 Plug 'junegunn/goyo.vim'
-	let g:goyo_width = 99
+	let g:goyo_width = 105
     let g:goyo_height = 40
 Plug 'junegunn/limelight.vim'
 Plug 'airblade/vim-gitgutter'
