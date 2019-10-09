@@ -1,21 +1,35 @@
 "Vim configuration file -- Marius Cramer (marcramer@protonmail.com)
-
+"vim-plug autoload
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 "Vim-Plug configuration–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 call plug#begin('~/vim/plugged')
 	Plug 'lervag/vimtex'
-    	let g:tex_flavor='latex'
-	    let g:vimtex_view_method='zathura'
-	    let g:vimtex_quickfix_mode=0
+    	let g:tex_flavor = 'latex'
+	    let g:vimtex_view_method = 'zathura'
+	    let g:vimtex_quickfix_mode = 0
 	    set conceallevel=0
-	    let g:tex_conceal='abdmg'
+	    let g:tex_conceal = 'abdmg'
 	Plug 'sirver/ultisnips'
 	    let g:UltiSnipsExpandTrigger = '<tab>'
 	    let g:UltiSnipsJumpForwardTrigger = '<tab>'
 	    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 	Plug 'vim-airline/vim-airline'
+		let g:airline_powerline_fonts = 1
+		if !exists('g:airline_symbols')
+		    let g:airline_symbols = {}
+		endif
+		let g:airline_left_sep = ''
+		let g:airline_left_alt_sep = ''
+		let g:airline_right_sep = ''
+		let g:airline_right_alt_sep = ''
+		let g:airline_symbols.readonly = ''
 	Plug 'vim-airline/vim-airline-themes'
-	    let g:airline_theme='deus'
+	    let g:airline_theme = 'deus'
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'vim-scripts/vim-auto-save'
 		let g:auto_save = 1
@@ -27,7 +41,10 @@ call plug#begin('~/vim/plugged')
 	Plug 'junegunn/limelight.vim'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'scrooloose/nerdtree'
-		let NERDTreeShowHidden=0
+		let NERDTreeShowHidden = 0
+		let NERDTreeQuitOnOpen = 1
+		let NERDTreeMinimalUI = 1
+		let NERDTreeDirArrows = 1
 	Plug 'iamcco/markdown-preview.nvim', {'do':{->mkdp#util#install()}}
 		let g:mkdp_browser = 'firefox'
 		let g:mkdp_preview_options = {
@@ -74,6 +91,7 @@ augroup END
 
 
 " NERDTree––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+" open NERDTree on default
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
