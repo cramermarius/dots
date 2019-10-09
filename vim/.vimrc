@@ -31,10 +31,6 @@ call plug#begin('~/vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	    let g:airline_theme = 'deus'
 	Plug 'arcticicestudio/nord-vim'
-	Plug 'vim-scripts/vim-auto-save'
-		let g:auto_save = 1
-		let g:auto_save_no_updatetime = 1
-		let g:auto_save_in_insert_mode = 0
 	Plug 'junegunn/goyo.vim'
 		let g:goyo_width = 105
 	    let g:goyo_height = 40
