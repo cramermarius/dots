@@ -65,6 +65,7 @@ set termguicolors
 set noshowmode
 set tw=90
 set smartcase
+set ignorecase
 set hlsearch
 set cursorline
 set foldmethod=syntax
@@ -99,14 +100,16 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Goyo functions–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 function! s:goyo_enter()
-	set nu
-	set noshowmode
+	set number
+	set relativenumber
+	set showmode
 	set noshowcmd
 	Limelight
 endfunction
 
 function! s:goyo_leave()
-	set nu
+	set number
+	set relativenumber
 	Limelight!
 endfunction
 
