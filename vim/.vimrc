@@ -49,6 +49,7 @@ call plug#begin('~/vim/plugged')
 	    \ }
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'hdima/python-syntax'
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 
@@ -70,6 +71,9 @@ set foldlevel=2
 set relativenumber
 set number
 set encoding=UTF-8
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
@@ -112,7 +116,7 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
+autocmd FileType gitcommit exec 'au VimEnter * startinsert'
 
 "Mappings–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 noremap <C-y> :tabn<CR>
