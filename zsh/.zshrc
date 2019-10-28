@@ -104,6 +104,7 @@ alias gs='git status'
 alias gp='git push'
 alias gd='git diff'
 alias gotop='gotop-cjbassi -c vice'
+alias spt='spotifyd && spt'
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
 function gcm() { git commit -m ""$1""; }

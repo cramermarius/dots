@@ -107,6 +107,14 @@ Otherwise Inkscape and KeePassX won't adapt to GTK theme
 			* ~/dotfiles/repo-backups/apps/Hasklug Light Nerd Font Complete Mono.otf
 			* https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hasklig/Light/complete/Hasklug%20Light%20Nerd%20Font%20Complete%20Mono.otf
 
+### CLI spotify
+* install spotifyd:
+`sudo apt install rustc cargo libasound2-dev libssl-dev pkg-config`
+`git clone https://github.com/Spotifyd/spotifyd.git ~/Documents/spotifyd/`
+`cd spotifyd`
+`cargo build --release spotifyd`
+`cargo install --path .`
+
 ### gedit
 * theme
 	* nord
