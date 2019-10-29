@@ -31,9 +31,11 @@ call plug#begin('~/vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	    let g:airline_theme = 'deus'
 	Plug 'arcticicestudio/nord-vim'
+	Plug 'sainnhe/vim-color-atlantis'
+	Plug 'sainnhe/archived-colors'
 	Plug 'junegunn/goyo.vim'
 		let g:goyo_width = 105
-	    let g:goyo_height = 40
+	    let g:goyo_height = 60
 	Plug 'junegunn/limelight.vim'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'scrooloose/nerdtree'
@@ -78,7 +80,9 @@ set omnifunc=syntaxcomplete#Complete
 
 
 " Theme–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+" colorscheme atlantis
 colorscheme nord
+"colorscheme cryslominsa
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
