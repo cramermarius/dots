@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias la='ls -A'
 alias l='ls -CF'
+alias ll='ls -Ahg'
 alias gs='git status'
 alias ga='git add'
 alias gst='git stage'

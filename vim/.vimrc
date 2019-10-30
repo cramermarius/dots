@@ -59,6 +59,7 @@ call plug#end()
 "vim settings–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 set laststatus=2
 set tabstop=4
+set noexpandtab
 set showmatch
 set termguicolors
 set noshowmode
