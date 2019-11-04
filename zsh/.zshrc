@@ -99,9 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias la='ls -A'
 alias l='ls -CF'
-alias ll='ls -Ahg'
-alias ext='exa -T'
-alias exl='exa -alh'
+alias lt='exa -T'
+alias ll='exa -alh'
 alias gs='git status'
 alias ga='git add'
 alias gst='git stage'
@@ -117,8 +116,3 @@ function schedsuspend() { sleep "$1" && systemctl suspend; }
 function schedshutdown() { sleep "$1" && shutdown; }
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
-
-# config
-[[ -s /home/mcramer/.autojump/etc/profile.d/autojump.sh ]] && source /home/mcramer/.autojump/etc/profile.d/autojump.sh
-
-autoload -U compinit && compinit -u
