@@ -182,12 +182,15 @@ bindsym Mod1+d exec tilix --quake
 bindsym Control+space exec chromium
 
 # services to run on startup
+exec keepassx
+exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/br2049/*
 exec_always spotifyd
 exec_always polybar main
 
-# misc configs
+# window configs
 focus_follows_mouse no # change window focus with mouse movement?
 new_window 1pixel #make window border 1px
+assign [class="KeePassX"] 5
 
 # shutdown menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot), (p) shutdown
