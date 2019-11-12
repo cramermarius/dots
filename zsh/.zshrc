@@ -97,10 +97,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+###############################################################################
+# list commands
 alias la='ls -A'
 alias l='ls -CF'
 alias lt='exa -T'
 alias ll='exa -alh'
+
+# git commands
 alias gs='git status'
 alias ga='git add'
 alias gst='git stage'
@@ -108,11 +113,20 @@ alias gcm='git commit -m'
 alias gp='git push'
 alias gpu='git pull'
 alias gd='git diff'
-alias e='exit'
 
-alias gotop='gotop-cjbassi -c vice'
-
+# system services
+alias bton='rfkill unblock bluetooth'
+alias btoff='rfkill block bluetooth'
+alias wifion='rfkill unblock wifi'
+alias wifioff='rfkill block wifi'
+alias ultbat='btoff && wifioff && cpufreqctl --governor --set=powersave'
+alias spow='systemctl poweroff'
+alias ssus='systemctl suspend'
 function schedsuspend() { sleep "$1" && systemctl suspend; }
-function schedshutdown() { sleep "$1" && shutdown; }
+function schedshutdown() { sleep "$1" && systemctl poweroff; }
+
+# misc
+alias gotop='gotop-cjbassi -c vice'
+alias e='exit'
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }

@@ -44,7 +44,7 @@ call plug#begin('~/vim/plugged')
 		let NERDTreeMinimalUI = 1
 		let NERDTreeDirArrows = 1
 	Plug 'iamcco/markdown-preview.nvim', {'do':{->mkdp#util#install()}}
-		let g:mkdp_browser = 'firefox'
+		let g:mkdp_browser = 'chromium'
 		let g:mkdp_preview_options = {
 	    \ 'disable_sync_scroll': 0,
 	    \ 'sync_scroll_type': 'relative',
@@ -131,5 +131,5 @@ nnoremap <C-i> :set hlsearch!<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
-nnoremap <C-p> <Plug>MarkdownPreviewToggle
+nmap <C-p> <Plug>MarkdownPreviewToggle
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
