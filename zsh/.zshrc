@@ -119,7 +119,7 @@ alias bton='rfkill unblock bluetooth'
 alias btoff='rfkill block bluetooth'
 alias wifion='rfkill unblock wifi'
 alias wifioff='rfkill block wifi'
-alias ultbat='btoff && wifioff && cpufreqctl --governor --set=powersave'
+alias ultbat='btoff && wifioff && sudo cpufreqctl --governor --set=powersave'
 alias spow='systemctl poweroff'
 alias ssus='systemctl suspend'
 function schedsuspend() { sleep "$1" && systemctl suspend; }
