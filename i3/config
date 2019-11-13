@@ -188,12 +188,13 @@ bindsym Mod4+Shift+p exec powermenu
 bindsym F8 exec networkmenu
 bindsym F9 exec cd ~/Pictures/scrots/ && scrotmenu
 bindsym F10 exec i3layoutmenu
+bindsym Shift+Mod1+c exec rofi -modi "clipboard:~/Documents/misc/apps/rofi-clipboard-manager/mclip.py menu" -show clipboard && ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py paste
 #
 # services to run on startup
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/br2049/Blade-Runner-2049-1730.jpg
-exec_always spotifyd
 exec_always polybar main
 exec_always xrandr --output DP-1 --same-as eDP-1
+exec --no-startup-id ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py daemon
 #
 # window configs
 focus_follows_mouse no # change window focus with mouse movement?
