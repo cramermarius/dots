@@ -136,3 +136,13 @@ alias spt='spotifyd && spt'
 alias dw='python3 ~/Documents/misc/apps/downloader-cli/download.py'
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
+
+# vpn connections
+alias ovpn-nl1='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-01.protonvpn.com.udp.ovpn'
+alias ovpn-nl2='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-02.protonvpn.com.udp.ovpn'
+alias ovpn-nl3='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-03.protonvpn.com.udp.ovpn'
+alias ovpn-us1='cd ~/Documents/misc/vpn-files/ && sudo openvpn us-free-01.protonvpn.com.udp.ovpn'
+alias ovpn-us2='cd ~/Documents/misc/vpn-files/ && sudo openvpn us-free-02.protonvpn.com.udp.ovpn'
+alias ovpn-jp1='cd ~/Documents/misc/vpn-files/ && sudo openvpn jp-free-01.protonvpn.com.udp.ovpn'
+alias ovpn-jp2='cd ~/Documents/misc/vpn-files/ && sudo openvpn jp-free-02.protonvpn.com.udp.ovpn'
+alias ovpn-jp3='cd ~/Documents/misc/vpn-files/ && sudo openvpn jp-free-03.protonvpn.com.udp.ovpn'

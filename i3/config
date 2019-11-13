@@ -39,7 +39,8 @@ floating_modifier Mod1
 bindsym Mod4+w kill
 
 # start rofi (a program launcher)
-bindsym Mod1+q exec rofi -combi-modi drun#window -show combi
+bindsym Mod1+q exec rofi -show drun
+bindsym Mod1+w exec rofi -show window
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -192,7 +193,7 @@ bindsym F10 exec i3layoutmenu
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/br2049/Blade-Runner-2049-1730.jpg
 exec_always spotifyd
 exec_always polybar main
-exec_always xrandr --auto
+exec_always xrandr --output DP-1 --same-as eDP-1
 #
 # window configs
 focus_follows_mouse no # change window focus with mouse movement?
