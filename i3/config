@@ -201,9 +201,10 @@ new_window 1pixel
 #
 #######################################################################
 # volume control
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
+bindsym XF86AudioMute exec pactl set-sink-mute 0 1
+bindsym Shift+XF86AudioMute exec pactl set-sink-mute 0 0
 #
 #######################################################################
 # COLORS

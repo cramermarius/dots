@@ -52,6 +52,9 @@ call plug#begin('~/vim/plugged')
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'hdima/python-syntax'
+	Plug 'vim-scripts/vim-auto-save'
+		let g:auto_save = 1 "enable on startup
+		let g:auto_save_in_insert_mode = 0
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 

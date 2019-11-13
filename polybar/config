@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = alsa wlan eth battery
+modules-right = pulseaudio wlan eth battery
 
 tray-position = right
 tray-padding = 2

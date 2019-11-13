@@ -20,7 +20,7 @@ case $chosen in
         i3-msg exit
 		;;
     $suspend)
-        amixer set Master mute && systemctl suspend
+        systemctl suspend
 		;;
 	$scheduled_suspend)
 		sleep 1500 && systemctl suspend
