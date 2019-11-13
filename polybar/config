@@ -57,11 +57,11 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = alsa cpu wlan eth battery
+modules-right = alsa wlan eth battery
 
 tray-position = right
 tray-padding = 2
-;tray-background = #2e3440
+tray-background = #2e3440
 
 ;wm-restack = bspwm
 ;wm-restack = i3

@@ -3,11 +3,11 @@
 //----------------------
 
 configuration {
-    modi:               "drun,window,run";
+    modi:               "drun,window,run,combi";
     cycle:              true;
     show-icons:         false;
     matching:           "normal";
-    lines:              8;
+    lines:              10;
     columns:            1;
     width:              550;
     location:           0;
@@ -15,4 +15,5 @@ configuration {
     font:               "Fire Code Light 10";
     hide-scrollbar:     true;
     theme:              "nord";
+	display-combi:		"rofi";
 }

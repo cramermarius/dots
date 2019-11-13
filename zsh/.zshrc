@@ -114,19 +114,25 @@ alias gp='git push'
 alias gpu='git pull'
 alias gd='git diff'
 
-# system services
+## system services
 alias bton='rfkill unblock bluetooth'
 alias btoff='rfkill block bluetooth'
 alias wifion='rfkill unblock wifi'
 alias wifioff='rfkill block wifi'
-alias ultbat='btoff && wifioff && sudo cpufreqctl --governor --set=powersave'
-alias spow='systemctl poweroff'
-alias ssus='systemctl suspend'
+alias scbr='sudo vim /sys/class/backlight/intel_backlight/brightness'
+
+# battery power management mode: governor=powersave, 2/8 cores online
+alias battery='sudo cpufreqctl --off --core=2 && sudo cpufreqctl --off --core=3 && sudo cpufreqctl --off --core=4 && sudo cpufreqctl --off --core=5 && sudo cpufreqctl --off --core=6 && sudo cpufreqctl --off --core=7 && sudo cpufreqctl --governor --set=powersave'
+# performance power management mode: governor=performance, 8/8 cores online
+alias performance='sudo cpufreqctl --on --core=2 && sudo cpufreqctl --on --core=3 && sudo cpufreqctl --on --core=4 && sudo cpufreqctl --on --core=5 && sudo cpufreqctl --on --core=6 && sudo cpufreqctl --on --core=7 && sudo cpufreqctl --governor --set=performance'
+
 function schedsuspend() { sleep "$1" && systemctl suspend; }
 function schedshutdown() { sleep "$1" && systemctl poweroff; }
 
 # misc
 alias gotop='gotop-cjbassi -c vice'
 alias e='exit'
+alias spt='spotifyd && spt'
+alias dw='python3 ~/Documents/misc/apps/downloader-cli/download.py'
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }

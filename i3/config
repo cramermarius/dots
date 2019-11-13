@@ -39,8 +39,8 @@ floating_modifier Mod1
 bindsym Mod4+w kill
 
 # start rofi (a program launcher)
-bindsym Mod1+q exec rofi -show drun
-bindsym Mod1+w exec rofi -show window
+bindsym Mod1+q exec rofi -combi-modi drun#window -show combi
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -80,9 +80,10 @@ bindsym Mod4+v split v
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym Mod1+<keybind> layout stacking
-bindsym Mod1+s layout tabbed
-bindsym Mod1+e layout toggle split
+## see down below for a layout-menu binding 
+# bindsym Mod1+s layout stacking
+# bindsym Mod1+<key> layout tabbed
+# bindsym Mod1+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod4+Shift+space floating toggle
@@ -174,64 +175,49 @@ mode "resize" {
 }
 
 bindsym Mod4+r mode "resize"
+
 #######################################################################
 # CUSTOM SETTINGS
-# start programs
+#
+# personal binding
 bindsym Mod4+Return exec tilix
 bindsym Mod1+d exec tilix --quake
 bindsym Control+space exec chromium
-
+bindsym Mod4+Shift+p exec powermenu
+bindsym F8 exec networkmenu
+bindsym F9 exec cd ~/Pictures/scrots/ && scrotmenu
+bindsym F10 exec i3layoutmenu
+#
 # services to run on startup
-exec keepassx
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/br2049/Blade-Runner-2049-1730.jpg
 exec_always spotifyd
 exec_always polybar main
-
+exec_always xrandr --auto
+#
 # window configs
 focus_follows_mouse no # change window focus with mouse movement?
-new_window 1pixel #make window border 1px
-assign [class="KeePassX"] 5
-
-# shutdown menu
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot), (p) shutdown
-mode "$mode_system" {
-	bindsym l exec --no-startup-id i3lock, mode "default"
-	bindsym e exec --no-startup-id i3-msg exit, mode "default"
-	bindsym s exec --no-startup-id systemctl suspend, mode "default"
-	bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-	bindsym r exec --no-startup-id systemctl reboot, mode "default"
-	bindsym p exec --no-startup-id systemctl poweroff, mode "default"
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
-bindsym Mod4+Shift+p mode "$mode_system"
+new_window 1pixel
+#
 #######################################################################
 # volume control
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+#
 #######################################################################
 # COLORS
-client.focused #88c0d0 #2e3440 #e5e9f0 #5e81ac #8fbcbb
-client.focused_inactive #88c0d0 #2e3440 #e5e9f0 #5e81ac #8fbcbb
-client.unfocused #81a1c1 #434c5e #eceff4 #4c566a #8fbcbb
-client.urgent #bf616a #2e3440 #e5e9f0 #bf616a #8fbcbb
-client.placeholder #ebcb8b #2e3440 #e5e9f0 #ebcb8b #8fbcbb
+client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #8fbcbb
+client.focused_inactive #2e3440 #2e3440 #e5e9f0 #5e81ac #2e3440
+client.unfocused #2e3440 #2e3440 #eceff4 #2e3440 #2e3440
+client.urgent #bf616a #2e3440 #e5e9f0 #bf616a #bf616a
+client.placeholder #2e3440 #2e3440 #e5e9f0 #ebcb8b #2e3440
 client.background #2e3440
+#
 #######################################################################
 # Restore GNOME's settings
 exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
 
 # Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
 exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
-#
-# Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
