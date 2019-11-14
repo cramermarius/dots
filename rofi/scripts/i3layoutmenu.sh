@@ -1,16 +1,15 @@
 #!/bin/bash
 
-rofi_command="rofi -theme nord.rasi"
-
-### Options ###
+# options to be displayed
 stacked="stacked"
 tabbed="tabbed"
 split="split"
-# Variable passed to rofi
+
+# options passed to variable
 options="$stacked\n$tabbed\n$split"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -p "i3layout" -selected-row 1)"
-case $chosen in
+selected="$(echo -e "$options" | rofi -dmenu -p "i3layout")"
+case $selected in
     $stacked)
         i3-msg layout stacked
         ;;

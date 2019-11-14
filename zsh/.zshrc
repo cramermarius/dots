@@ -119,7 +119,6 @@ alias bton='rfkill unblock bluetooth'
 alias btoff='rfkill block bluetooth'
 alias wifion='rfkill unblock wifi'
 alias wifioff='rfkill block wifi'
-alias scbr='sudo vim /sys/class/backlight/intel_backlight/brightness'
 
 # battery power management mode: governor=powersave, 2/8 cores online
 alias battery='sudo cpufreqctl --off --core=2 && sudo cpufreqctl --off --core=3 && sudo cpufreqctl --off --core=4 && sudo cpufreqctl --off --core=5 && sudo cpufreqctl --off --core=6 && sudo cpufreqctl --off --core=7 && sudo cpufreqctl --governor --set=powersave'
@@ -134,8 +133,10 @@ alias gotop='gotop-cjbassi -c vice'
 alias e='exit'
 alias spt='spotifyd && spt'
 alias dw='python3 ~/Documents/misc/apps/downloader-cli/download.py'
+alias clearclip='echo "" > ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py'
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
+function wttr() { curl wttr.in/~""$1""; }
 
 # vpn connections
 alias ovpn-nl1='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-01.protonvpn.com.udp.ovpn'

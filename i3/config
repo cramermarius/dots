@@ -185,15 +185,16 @@ bindsym Mod4+Return exec tilix
 bindsym Mod1+d exec tilix --quake
 bindsym Control+space exec chromium
 bindsym Mod4+Shift+p exec powermenu
+bindsym F7 exec xrandrmenu
+bindsym Control+F7 exec i3layoutmenu
 bindsym F8 exec networkmenu
-bindsym F9 exec cd ~/Pictures/scrots/ && scrotmenu
-bindsym F10 exec i3layoutmenu
+bindsym F10 exec cd ~/Pictures/scrots/ && scrotmenu
 bindsym Shift+Mod1+c exec rofi -modi "clipboard:~/Documents/misc/apps/rofi-clipboard-manager/mclip.py menu" -show clipboard && ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py paste
 #
 # services to run on startup
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/br2049/Blade-Runner-2049-1730.jpg
-exec_always polybar main
-exec_always xrandr --output DP-1 --same-as eDP-1
+exec_always --no-startup-id polybar main
+exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
 exec --no-startup-id ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py daemon
 #
 # window configs

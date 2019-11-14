@@ -1,16 +1,15 @@
 #!/bin/bash
 
-rofi_command="rofi -theme nord.rasi"
+# options to be displayed
+screen="screen"
+area="area"
+window="window"
 
-### Options ###
-screen=" screen"
-area=" area"
-window=" window"
-# Variable passed to rofi
+# options to be displyed
 options="$screen\n$area\n$window"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -p "scrot" -selected-row 1)"
-case $chosen in
+selected="$(echo -e "$options" | rofi -dmenu -p "scrot")"
+case $selected in
     $screen)
         sleep 1; scrot
         ;;
