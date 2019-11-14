@@ -196,6 +196,7 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/br2049/Blade-Ru
 exec_always --no-startup-id polybar main
 exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
 exec --no-startup-id ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py daemon
+exec_always --no-startup-id battery
 #
 # window configs
 focus_follows_mouse no # change window focus with mouse movement?

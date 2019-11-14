@@ -22,7 +22,6 @@ case $chosen in
         i3-msg exit
 		;;
     $suspend)
-		i3lock-fancy
         systemctl suspend
 		;;
 	$scheduled_suspend0)

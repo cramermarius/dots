@@ -8,7 +8,7 @@ window="window"
 # options to be displyed
 options="$screen\n$area\n$window"
 
-selected="$(echo -e "$options" | rofi -dmenu -p "scrot")"
+selected="$(echo -e "$options" | rofi -lines 3 -dmenu -p "scrot")"
 case $selected in
     $screen)
         sleep 1; scrot
