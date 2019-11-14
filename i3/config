@@ -188,7 +188,7 @@ bindsym Mod4+Shift+p exec powermenu
 bindsym F7 exec xrandrmenu
 bindsym Control+F7 exec i3layoutmenu
 bindsym F8 exec networkmenu
-bindsym F10 exec cd ~/Pictures/scrots/ && scrotmenu
+bindsym F10 exec scrotmenu
 bindsym Shift+Mod1+c exec rofi -modi "clipboard:~/Documents/misc/apps/rofi-clipboard-manager/mclip.py menu" -show clipboard && ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py paste
 #
 # services to run on startup

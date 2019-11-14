@@ -1,23 +1,19 @@
 #!/bin/bash
 
 # options to be displayed
-stacked="stacked"
-tabbed="tabbed"
-split="split"
+option0="stacked"
+option1="tabbed"
+option2="split"
 
 # options passed to variable
-options="$stacked\n$tabbed\n$split"
+options="$option0\n$option1\n$option2"
 
-selected="$(echo -e "$options" | rofi -dmenu -p "i3layout")"
+selected="$(echo -e "$options" | rofi -lines 3 -dmenu -p "i3layout")"
 case $selected in
-    $stacked)
-        i3-msg layout stacked
-        ;;
-    $tabbed)
-        i3-msg layout tabbed
-        ;;
-    $split)
-        i3-msg layout toggle split
-        ;;
+    $option0)
+        i3-msg layout stacked;;
+    $option1)
+        i3-msg layout tabbed;;
+    $option2)
+        i3-msg layout toggle split;;
 esac
-

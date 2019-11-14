@@ -136,7 +136,7 @@ alias dw='python3 ~/Documents/misc/apps/downloader-cli/download.py'
 alias clearclip='echo "" > ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py'
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
-function wttr() { curl wttr.in/~""$1""; }
+function wttr.in() { curl wttr.in/~""$1""; }
 
 # vpn connections
 alias ovpn-nl1='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-01.protonvpn.com.udp.ovpn'

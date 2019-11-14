@@ -1,22 +1,19 @@
 #!/bin/bash
 
 # options to be displayed
-screen="screen"
-area="area"
-window="window"
+option0="screen"
+option1="area"
+option2="window"
 
 # options to be displyed
-options="$screen\n$area\n$window"
+options="$option0\n$option1\n$option2"
 
 selected="$(echo -e "$options" | rofi -lines 3 -dmenu -p "scrot")"
 case $selected in
-    $screen)
-        sleep 1; scrot
-        ;;
-    $area)
-        scrot -s
-        ;;
-    $window)
-        sleep 1; scrot -u
-        ;;
+    $option0)
+        cd ~/Pictures/scrots/ && sleep 1 && scrot;;
+    $option1)
+        cd ~/Pictures/scrots/ && scrot -s;;
+    $option2)
+        cd ~/Pictures/scrots/ && sleep 1 && scrot -u;;
 esac
