@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mcramer/.oh-my-zsh"
@@ -119,11 +120,12 @@ alias bton='rfkill unblock bluetooth'
 alias btoff='rfkill block bluetooth'
 alias wifion='rfkill unblock wifi'
 alias wifioff='rfkill block wifi'
+alias i3lock='i3lock -c 81a1c1 -n'
 
 # battery power management mode: governor=powersave, 2/8 cores online
-alias battery='sudo cpufreqctl --off --core=2 && sudo cpufreqctl --off --core=3 && sudo cpufreqctl --off --core=4 && sudo cpufreqctl --off --core=5 && sudo cpufreqctl --off --core=6 && sudo cpufreqctl --off --core=7 && sudo cpufreqctl --governor --set=powersave'
+alias coresoff='sudo cpufreqctl --off --core=2 && sudo cpufreqctl --off --core=3 && sudo cpufreqctl --off --core=4 && sudo cpufreqctl --off --core=5 && sudo cpufreqctl --off --core=6 && sudo cpufreqctl --off --core=7'
 # performance power management mode: governor=performance, 8/8 cores online
-alias performance='sudo cpufreqctl --on --core=2 && sudo cpufreqctl --on --core=3 && sudo cpufreqctl --on --core=4 && sudo cpufreqctl --on --core=5 && sudo cpufreqctl --on --core=6 && sudo cpufreqctl --on --core=7 && sudo cpufreqctl --governor --set=performance'
+alias coreson='sudo cpufreqctl --on --core=2 && sudo cpufreqctl --on --core=3 && sudo cpufreqctl --on --core=4 && sudo cpufreqctl --on --core=5 && sudo cpufreqctl --on --core=6 && sudo cpufreqctl --on --core=7'
 
 function schedsuspend() { sleep "$1" && systemctl suspend; }
 function schedshutdown() { sleep "$1" && systemctl poweroff; }
@@ -134,16 +136,13 @@ alias e='exit'
 alias spt='spotifyd && spt'
 alias dw='python3 ~/Documents/misc/apps/downloader-cli/download.py'
 alias clearclip='echo "" > ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py'
+alias taskl='task long'
+function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzner.de/"$1".bin && rm ~/Documents/misc/speedtest/*; }
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
 function wttr.in() { curl wttr.in/~""$1""; }
 
 # vpn connections
-alias ovpn-nl1='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-01.protonvpn.com.udp.ovpn'
-alias ovpn-nl2='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-02.protonvpn.com.udp.ovpn'
-alias ovpn-nl3='cd ~/Documents/misc/vpn-files/ && sudo openvpn nl-free-03.protonvpn.com.udp.ovpn'
-alias ovpn-us1='cd ~/Documents/misc/vpn-files/ && sudo openvpn us-free-01.protonvpn.com.udp.ovpn'
-alias ovpn-us2='cd ~/Documents/misc/vpn-files/ && sudo openvpn us-free-02.protonvpn.com.udp.ovpn'
-alias ovpn-jp1='cd ~/Documents/misc/vpn-files/ && sudo openvpn jp-free-01.protonvpn.com.udp.ovpn'
-alias ovpn-jp2='cd ~/Documents/misc/vpn-files/ && sudo openvpn jp-free-02.protonvpn.com.udp.ovpn'
-alias ovpn-jp3='cd ~/Documents/misc/vpn-files/ && sudo openvpn jp-free-03.protonvpn.com.udp.ovpn'
+alias protonc="sudo protonvpn connect -f -p TCP"
+alias protond="sudo protonvpn disconnect"
+alias protons="protonvpn status"

@@ -9,19 +9,19 @@ endif
 "Vim-Plug configuration–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 call plug#begin('~/vim/plugged')
 	Plug 'lervag/vimtex'
-    	let g:tex_flavor = 'latex'
-	    let g:vimtex_view_method = 'zathura'
-	    let g:vimtex_quickfix_mode = 0
-	    set conceallevel=0
-	    let g:tex_conceal = 'abdmg'
+		let g:tex_flavor='latex'
+		let g:vimtex_view_method='zathura'
+		let g:vimtex_quickfix_mode=0
+		set conceallevel=0
+		let g:tex_conceal='abdmg'
 	Plug 'sirver/ultisnips'
-	    let g:UltiSnipsExpandTrigger = '<tab>'
-	    let g:UltiSnipsJumpForwardTrigger = '<tab>'
-	    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+		let g:UltiSnipsExpandTrigger = '<tab>'
+		let g:UltiSnipsJumpForwardTrigger = '<tab>'
+		let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 	Plug 'vim-airline/vim-airline'
 		let g:airline_powerline_fonts = 1
 		if !exists('g:airline_symbols')
-		    let g:airline_symbols = {}
+			let g:airline_symbols = {}
 		endif
 		let g:airline_left_sep = ''
 		let g:airline_left_alt_sep = ''
@@ -29,13 +29,12 @@ call plug#begin('~/vim/plugged')
 		let g:airline_right_alt_sep = ''
 		let g:airline_symbols.readonly = ''
 	Plug 'vim-airline/vim-airline-themes'
-	    let g:airline_theme = 'deus'
+		let g:airline_theme = 'deus'
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'sainnhe/vim-color-atlantis'
-	Plug 'sainnhe/archived-colors'
 	Plug 'junegunn/goyo.vim'
 		let g:goyo_width = 105
-	    let g:goyo_height = 60
+		let g:goyo_height = 60
 	Plug 'junegunn/limelight.vim'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'scrooloose/nerdtree'
@@ -46,12 +45,10 @@ call plug#begin('~/vim/plugged')
 	Plug 'iamcco/markdown-preview.nvim', {'do':{->mkdp#util#install()}}
 		let g:mkdp_browser = 'chromium'
 		let g:mkdp_preview_options = {
-	    \ 'disable_sync_scroll': 0,
-	    \ 'sync_scroll_type': 'relative',
-	    \ }
+		\ 'disable_sync_scroll': 1,
+		\ }
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'hdima/python-syntax'
 	Plug 'vim-scripts/vim-auto-save'
 		let g:auto_save = 1 "enable on startup
 		let g:auto_save_in_insert_mode = 0
@@ -84,9 +81,8 @@ set omnifunc=syntaxcomplete#Complete
 
 
 " Theme–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-" colorscheme atlantis
 colorscheme nord
-"colorscheme cryslominsa
+" colorscheme atlantis
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
@@ -139,4 +135,6 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+" au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x37 = Escape'
+" au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x37 = Control_L'
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
