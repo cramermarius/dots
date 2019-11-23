@@ -181,30 +181,28 @@ bindsym Mod4+r mode "resize"
 ## CUSTOM SETTINGS
 #
 # BINDINGS
-bindsym Mod4+Return exec tilix
-bindsym Mod1+d exec tilix --quake
-bindsym Control+space exec chromium
+bindsym Mod4+Return exec konsole
+bindsym Control+space exec firefox
 bindsym Mod4+Shift+x exec powermenu
 bindsym F7 exec xrandrmenu
 bindsym Control+F7 exec i3layoutmenu
 bindsym F8 exec networkmenu
 bindsym F10 exec scrotmenu
-bindsym Shift+Mod1+c exec rofi -modi "clipboard:~/Documents/misc/apps/rofi-clipboard-manager/mclip.py menu" -show clipboard && ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py paste
+# bindsym Shift+Mod1+c exec rofi -modi "clipboard:~/Documents/misc/apps/rofi-clipboard-manager/mclip.py menu" -show clipboard && ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py paste
 #
 # VOLUME CONTROL
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 2%+ unmute
 #bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 2%- unmute
 #bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
-bindsym F3 exec amixer -D pulse set Master 2%+ unmute
-bindsym F2 exec amixer -D pulse set Master 2%- unmute
-bindsym F1 exec amixer -D pulse set Master 1+ toggle
+bindsym F3 exec pactl set-sink-volume 0 +2%
+bindsym F2 exec pactl set-sink-volume 0 -2%
+bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/br2049/Blade-Runner-2049-1730.jpg
 exec_always --no-startup-id polybar main
 exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
-exec_always --no-startup-id ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py daemon
 exec_always --no-startup-id battery
 #
 # WINDOW CONFIGS
@@ -219,16 +217,5 @@ client.urgent #bf616a #2e3440 #e5e9f0 #bf616a #bf616a
 client.placeholder #2e3440 #2e3440 #e5e9f0 #ebcb8b #2e3440
 client.background #2e3440
 #
-#######################################################################
-# GNOME SETTINGS (idk if this even does anything, I'm just leaving it in)
-# restore GNOME's settings
-exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
-
-# fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
-exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
-#######################################################################
-# EXPERIMENTAL
-set $backlight_path ~/Documents/misc/apps/i3-kb-backlight
-set $brightness_step 1
 #######################################################################
 exec i3-config-wizard

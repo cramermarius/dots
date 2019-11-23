@@ -2,33 +2,6 @@
 ### gitlab.com/mcramer/dotfiles
 
 ## system settings
-
-## GNOME shell
-### extensions
-* Activities configurator
-	* Hide Icon [ON]
-	* Hide Text [ON]
-	* Remove Activities Button [ON]
-	* Disable Hot Corner [ON]
-	* Hide Application Menu Button Icon [ON]
-	* Override Shell Theme [ON]
-	* Set Panel Background [#2e3440]
-* Caffeine
-	* Show Caffeine in top panel [ON]
-	* Enable when a fullscreen application is running [OFF]
-	* Restore state across reboots [OFF]
-	* Enable notifications [OFF]
-* No Annoyance
-* Panel OSD
-	* Horizontal Position 100.0%
-	* Vertical Position 100.0%
-* Remove App Menu
-* Shelltile
-* Sound input & and output device chooser
-* User themes
-* Workspace buttons
-* cpufreq
-
 ### appearance
 NOTE: put themes and icons in /usr/share/themes/ and /usr/share/icons/, respectively. 
 Otherwise Inkscape and KeePassX won't adapt to GTK theme
@@ -58,9 +31,16 @@ Otherwise Inkscape and KeePassX won't adapt to GTK theme
 	* Right Super
 
 ## applications
-* sudo apt -y install gimp mpv sxiv zathura vim texlive-lang-german texlive-bibtex-extra biber texlive-latex-extra gnome-tweak-tool papirus-icon-theme keepassx s-tui inkscape chromium-browser google-chrome-stable tilix deja-dup duplicity ranger gnome-software npm python3 pdf2svg xclip python-pip python-xlib
-	* maybe: texlive-latex-base
-* sudo snap install spotify insync
+* sudo dnf -y install gimp feh zathura vim texlive-collection-basic texlive-collection-langgerman texlive-collection-bibtexextra biber texlive-collection-latex texlive-collection-latexrecommended keepassx inkscape chromium-browser deja-dup duplicity ranger python3 pdf2svg xclip python-pip python-xlib konsole
+* sudo snap install spotify
+* sudo snap install mpv --beta
+
+### polybar dependencies
+* sudo dnf install -y cairo-devel xcb-util-devel libxcb-devel xcb-proto xcb-util-image-devel xcb-util-wm-devel
+* sudo dnf install -y xcb-util-xrm-devel xcb-util-cursor-devel alsa-lib-devel pulseaudio-libs-devel i3-ipc jsoncpp-devel libmpdclient-devel libcurl-devel wireless-tools-devel libnl3-devel
+
+### dunst dependencies
+* sudo dnf -y install dbus-devel libX11-devel libXrandr-devel glib2-devel pango-devel gtk3-devel libxdg-basedir-devel libXScrnSaver-devel
 
 ## application-specifics
 ### vim
@@ -109,14 +89,8 @@ Otherwise Inkscape and KeePassX won't adapt to GTK theme
 
 ### CLI spotify
 * install spotifyd:
-`sudo apt install rustc cargo libasound2-dev libssl-dev pkg-config`
+`sudo dnf install rustc cargo alsa-lib-devel`
 `git clone https://github.com/Spotifyd/spotifyd.git ~/Documents/spotifyd/`
 `cd spotifyd`
-`cargo build --release spotifyd`
+`cargo build --release`
 `cargo install --path .`
-
-### gedit
-* theme
-	* nord
-		* https://github.com/arcticicestudio/nord-gedit
-		* ~/dotfiles/repo-backups/apps/nord-gedit

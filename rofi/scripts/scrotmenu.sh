@@ -1,19 +1,16 @@
 #!/bin/bash
 
 # options to be displayed
-option0="screen"
-option1="area"
-option2="window"
+option0="full"
+option1="selection"
 
 # options to be displyed
-options="$option0\n$option1\n$option2"
+options="$option0\n$option1"
 
-selected="$(echo -e "$options" | rofi -lines 3 -dmenu -p "scrot")"
+selected="$(echo -e "$options" | rofi -lines 2 -dmenu -p "flame")"
 case $selected in
     $option0)
-        cd ~/Pictures/scrots/ && sleep 1 && scrot;;
+        flameshot full -p ~/Pictures/scrots -d 300;;
     $option1)
-        cd ~/Pictures/scrots/ && scrot -s;;
-    $option2)
-        cd ~/Pictures/scrots/ && sleep 1 && scrot -u;;
+        flameshot gui -p ~/Pictures/scrots;;
 esac

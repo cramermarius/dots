@@ -126,17 +126,13 @@ alias i3lock='i3lock -c 81a1c1 -n'
 alias coresoff='sudo cpufreqctl --off --core=2 && sudo cpufreqctl --off --core=3 && sudo cpufreqctl --off --core=4 && sudo cpufreqctl --off --core=5 && sudo cpufreqctl --off --core=6 && sudo cpufreqctl --off --core=7'
 # performance power management mode: governor=performance, 8/8 cores online
 alias coreson='sudo cpufreqctl --on --core=2 && sudo cpufreqctl --on --core=3 && sudo cpufreqctl --on --core=4 && sudo cpufreqctl --on --core=5 && sudo cpufreqctl --on --core=6 && sudo cpufreqctl --on --core=7'
-
-function schedsuspend() { sleep "$1" && systemctl suspend; }
-function schedshutdown() { sleep "$1" && systemctl poweroff; }
+alias battery='sudo tlp bat && coresoff && wifioff && btoff'
 
 # misc
 alias gotop='gotop-cjbassi -c vice'
 alias e='exit'
-alias spt='spotifyd && spt'
-alias dw='python3 ~/Documents/misc/apps/downloader-cli/download.py'
-alias clearclip='echo "" > ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py'
-alias taskl='task long'
+alias linux-drive='sudo mount -t ext4 -o rw /dev/sda1 /media/mcramer/linux-drive'
+alias linux-drive-2='sudo mount -t ext4 -o rw /dev/sda1 /media/mcramer/linux-drive-2'
 function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzner.de/"$1".bin && rm ~/Documents/misc/speedtest/*; }
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
@@ -146,3 +142,5 @@ function wttr.in() { curl wttr.in/~""$1""; }
 alias protonc="sudo protonvpn connect -f -p TCP"
 alias protond="sudo protonvpn disconnect"
 alias protons="protonvpn status"
+
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
