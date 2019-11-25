@@ -188,7 +188,6 @@ bindsym F7 exec xrandrmenu
 bindsym Control+F7 exec i3layoutmenu
 bindsym F8 exec networkmenu
 bindsym F10 exec scrotmenu
-# bindsym Shift+Mod1+c exec rofi -modi "clipboard:~/Documents/misc/apps/rofi-clipboard-manager/mclip.py menu" -show clipboard && ~/Documents/misc/apps/rofi-clipboard-manager/mclip.py paste
 #
 # VOLUME CONTROL
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 2%+ unmute
@@ -200,7 +199,7 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/br2049/Blade-Runner-2049-1730.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/walls/F5cCLdj.png
 exec_always --no-startup-id polybar main
 exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
 exec_always --no-startup-id battery

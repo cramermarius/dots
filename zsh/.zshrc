@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH:/var/lib/snapd/snap/bin
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Path to your oh-my-zsh installation.
@@ -116,17 +116,17 @@ alias gpu='git pull'
 alias gd='git diff'
 
 ## system services
+alias v='vim'
+alias sv='sudo vim'
+alias r='ranger'
+alias sr='sudo ranger'
+alias mkd='mkdir -pv'
 alias bton='rfkill unblock bluetooth'
 alias btoff='rfkill block bluetooth'
 alias wifion='rfkill unblock wifi'
 alias wifioff='rfkill block wifi'
-alias i3lock='i3lock -c 81a1c1 -n'
-
-# battery power management mode: governor=powersave, 2/8 cores online
-alias coresoff='sudo cpufreqctl --off --core=2 && sudo cpufreqctl --off --core=3 && sudo cpufreqctl --off --core=4 && sudo cpufreqctl --off --core=5 && sudo cpufreqctl --off --core=6 && sudo cpufreqctl --off --core=7'
-# performance power management mode: governor=performance, 8/8 cores online
-alias coreson='sudo cpufreqctl --on --core=2 && sudo cpufreqctl --on --core=3 && sudo cpufreqctl --on --core=4 && sudo cpufreqctl --on --core=5 && sudo cpufreqctl --on --core=6 && sudo cpufreqctl --on --core=7'
-alias battery='sudo tlp bat && coresoff && wifioff && btoff'
+alias i3lock='i3lock -c 4c566a -n'
+alias battery='wifioff && btoff && sudo tlp bat && brightnessmenu'
 
 # misc
 alias gotop='gotop-cjbassi -c vice'
@@ -139,7 +139,7 @@ function lmkcc() { latexmk -pdf -pvc "$1"; }
 function wttr.in() { curl wttr.in/~""$1""; }
 
 # vpn connections
-alias protonc="sudo protonvpn connect -f -p TCP"
+alias protonc="sudo protonvpn connect -f"
 alias protond="sudo protonvpn disconnect"
 alias protons="protonvpn status"
 

@@ -22,7 +22,7 @@ case $chosen in
     $option1)
         i3-msg exit;;
     $option2)
-        systemctl suspend && i3lock -c 4e566a -n;;
+        systemctl suspend && i3lock -c 4c566a -n;;
 	$option3)
 		sleep 600 && systemctl suspend && i3lock -c 4c566a -n;;
 	$option4)
