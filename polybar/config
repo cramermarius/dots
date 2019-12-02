@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio backlight mem cpu cpudef wlan eth battery
+modules-right = pulseaudio backlight mem cpu wlan eth battery
 
 tray-position = right
 tray-padding = 2
@@ -116,7 +116,7 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
-; label-separator = 
+; label-separator =
 
 [module/cpu]
 type = custom/script
@@ -346,7 +346,7 @@ udspeed-minwidth = 5
 accumulate-stats = true
 
 ; Consider an `UNKNOWN` interface state as up.
-; Some devices like USB network adapters have 
+; Some devices like USB network adapters have
 ; an unknown state, even when they're running
 ; Default: false
 unknown-as-up = true
@@ -359,7 +359,7 @@ type = internal/temperature
 interval = 0.5
 
 ; Thermal zone to use
-; To list all the zone types, run 
+; To list all the zone types, run
 ; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
 ; Default: 0
 thermal-zone = 0

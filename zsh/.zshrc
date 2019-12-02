@@ -104,9 +104,7 @@ source $ZSH/oh-my-zsh.sh
 alias la='ls -A'
 alias l='ls -CF'
 alias lt='exa -T'
-alias ll='exa -alh'
-
-# git commands
+alias ll='exa --color=always -alh'
 alias gs='git status'
 alias ga='git add'
 alias gst='git stage'
@@ -114,21 +112,18 @@ alias gcm='git commit -m'
 alias gp='git push'
 alias gpu='git pull'
 alias gd='git diff'
-
-## system services
 alias v='vim'
 alias sv='sudo vim'
 alias r='ranger'
 alias sr='sudo ranger'
+alias z='zathura'
 alias mkd='mkdir -pv'
 alias bton='rfkill unblock bluetooth'
 alias btoff='rfkill block bluetooth'
 alias wifion='rfkill unblock wifi'
 alias wifioff='rfkill block wifi'
-alias i3lock='i3lock -c 4c566a -n'
-alias battery='wifioff && btoff && sudo tlp bat && brightnessmenu'
-
-# misc
+alias i3lock='i3lock -c 4e566a -n'
+alias battery='wifioff && btoff && sudo tlp bat && sudo powertop --auto-tune && brightnessmenu'
 alias gotop='gotop-cjbassi -c vice'
 alias e='exit'
 alias linux-drive='sudo mount -t ext4 -o rw /dev/sda1 /media/mcramer/linux-drive'
@@ -137,10 +132,7 @@ function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzne
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
 function wttr.in() { curl wttr.in/~""$1""; }
-
-# vpn connections
 alias protonc="sudo protonvpn connect -f"
 alias protond="sudo protonvpn disconnect"
 alias protons="protonvpn status"
-
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)

@@ -10,9 +10,8 @@ endif
 call plug#begin('~/vim/plugged')
 	Plug 'lervag/vimtex'
 		let g:tex_flavor='latex'
-		let g:vimtex_view_method='zathura'
 		let g:vimtex_quickfix_mode=0
-		set conceallevel=0
+		set conceallevel=1
 		let g:tex_conceal='abdmg'
 	Plug 'sirver/ultisnips'
 		let g:UltiSnipsExpandTrigger = '<tab>'
@@ -61,19 +60,19 @@ set laststatus=2
 set tabstop=4
 set noexpandtab
 set showmatch
-set termguicolors
 set noshowmode
 set tw=90
 set smartcase
 set ignorecase
 set hlsearch
-set cursorline
+set nocursorline
 set foldmethod=syntax
 set foldnestmax=10
 set foldlevel=2
 set relativenumber
 set number
 set encoding=UTF-8
+set hlsearch!
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete

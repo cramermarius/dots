@@ -81,7 +81,7 @@ bindsym Mod4+v split v
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-## see down below for a layout-menu binding 
+## see down below for a layout-menu binding
 # bindsym Mod1+s layout stacking
 # bindsym Mod1+<key> layout tabbed
 # bindsym Mod1+e layout toggle split
@@ -188,6 +188,8 @@ bindsym F7 exec xrandrmenu
 bindsym Control+F7 exec i3layoutmenu
 bindsym F8 exec networkmenu
 bindsym F10 exec scrotmenu
+bindsym Mod1+Shift+d move scratchpad
+bindsym Mod1+d scratchpad show
 #
 # VOLUME CONTROL
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 2%+ unmute
@@ -202,14 +204,13 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 exec_always --no-startup-id feh --bg-scale ~/Pictures/walls/F5cCLdj.png
 exec_always --no-startup-id polybar main
 exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
-exec_always --no-startup-id battery
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
 new_window 1pixel
 #
 # COLORS
-client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #8fbcbb
+client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #3b4252
 client.focused_inactive #2e3440 #2e3440 #e5e9f0 #5e81ac #2e3440
 client.unfocused #2e3440 #2e3440 #eceff4 #2e3440 #2e3440
 client.urgent #bf616a #2e3440 #e5e9f0 #bf616a #bf616a
