@@ -204,10 +204,15 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 exec_always --no-startup-id feh --bg-scale ~/Pictures/walls/F5cCLdj.png
 exec_always --no-startup-id polybar main
 exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
+exec_always --no-startup-id konsole
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
 new_window 1pixel
+#
+# Workspace Assignments
+assign [class="Spotify"] 4
+assign [class="Keepassx2"] 5
 #
 # COLORS
 client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #3b4252

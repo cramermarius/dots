@@ -128,6 +128,7 @@ alias gotop='gotop-cjbassi -c vice'
 alias e='exit'
 alias linux-drive='sudo mount -t ext4 -o rw /dev/sda1 /media/mcramer/linux-drive'
 alias linux-drive-2='sudo mount -t ext4 -o rw /dev/sda1 /media/mcramer/linux-drive-2'
+alias pass='bash && pass'
 function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzner.de/"$1".bin && rm ~/Documents/misc/speedtest/*; }
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }

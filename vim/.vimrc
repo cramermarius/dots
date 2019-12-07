@@ -11,8 +11,7 @@ call plug#begin('~/vim/plugged')
 	Plug 'lervag/vimtex'
 		let g:tex_flavor='latex'
 		let g:vimtex_quickfix_mode=0
-		set conceallevel=1
-		let g:tex_conceal='abdmg'
+		set conceallevel=0
 	Plug 'sirver/ultisnips'
 		let g:UltiSnipsExpandTrigger = '<tab>'
 		let g:UltiSnipsJumpForwardTrigger = '<tab>'
@@ -129,11 +128,12 @@ nnoremap <C-i> :set hlsearch!<CR>
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
-nmap <C-p> <Plug>MarkdownPreviewToggle
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+nmap <C-p> :set nonu norelativenumber <bar> :GitGutterDisable<CR>
+nmap <S-p> :set nu relativenumber <bar> :GitGutterEnable<CR>
 " au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x37 = Escape'
 " au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x37 = Control_L'
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
