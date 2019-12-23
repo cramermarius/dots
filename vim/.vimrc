@@ -8,14 +8,13 @@ endif
 
 "Vim-Plug configuration–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 call plug#begin('~/vim/plugged')
-	Plug 'lervag/vimtex'
-		let g:tex_flavor='latex'
-		let g:vimtex_quickfix_mode=0
-		set conceallevel=0
 	Plug 'sirver/ultisnips'
 		let g:UltiSnipsExpandTrigger = '<tab>'
 		let g:UltiSnipsJumpForwardTrigger = '<tab>'
 		let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+	Plug 'lervag/vimtex'
+	    set conceallevel=0
+	    let g:tex_conceal='abdmg'
 	Plug 'vim-airline/vim-airline'
 		let g:airline_powerline_fonts = 1
 		if !exists('g:airline_symbols')

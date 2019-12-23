@@ -184,6 +184,7 @@ bindsym Mod4+r mode "resize"
 bindsym Mod4+Return exec konsole
 bindsym Control+space exec firefox
 bindsym Mod4+Shift+x exec powermenu
+bindsym Mod1+l exec i3lock -c 4c566a -n
 bindsym F7 exec xrandrmenu
 bindsym Control+F7 exec i3layoutmenu
 bindsym F8 exec networkmenu
@@ -201,10 +202,11 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
-exec_always --no-startup-id feh --bg-scale ~/Pictures/walls/F5cCLdj.png
+exec_always --no-startup-id feh --bg-scale Pictures/walls/br2049/Blade-Runner-2049-frame-4k-260.jpg
 exec_always --no-startup-id polybar main
 exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
 exec_always --no-startup-id konsole
+exec_always --no-startup-id linux-drive
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
