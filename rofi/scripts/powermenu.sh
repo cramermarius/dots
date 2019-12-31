@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # options to be displayed
-option0="lock"
 option1="logout"
 option2="suspend"
 option3="scheduled suspend (10min)"
@@ -13,12 +12,10 @@ option8="reboot"
 option9="shutdown"
 
 # options passed into variable
-options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$option7\n$option8\n$option9"
+options="$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$option7\n$option8\n$option9"
 
-chosen="$(echo -e "$options" | rofi -lines 10 -dmenu -p "power")"
+chosen="$(echo -e "$options" | rofi -lines 9 -dmenu -p "power")"
 case $chosen in
-    $option0)
-        i3lock -c 4c566a -n;;
     $option1)
         i3-msg exit;;
     $option2)

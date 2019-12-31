@@ -1,4 +1,3 @@
-# my (github.com/cramermarius) i3 config file
 #
 # i3 config file (v4)
 #
@@ -76,8 +75,6 @@ bindsym Mod4+b split h
 
 # split in vertical orientation
 bindsym Mod4+v split v
-
-# enter fullscreen mode for the focused container
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -190,6 +187,7 @@ bindsym F8 exec networkmenu
 bindsym F10 exec scrotmenu
 bindsym Mod1+Shift+d move scratchpad
 bindsym Mod1+d scratchpad show
+bindsym Mod1+l exec i3lock -c 4e566a -n
 #
 # VOLUME CONTROL
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 2%+ unmute
@@ -201,9 +199,8 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
-exec_always --no-startup-id feh --bg-scale ~/Pictures/walls/F5cCLdj.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/walls/Blade-Runner-2049-frame-4k-260.jpg
 exec_always --no-startup-id polybar main
-exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
