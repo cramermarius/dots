@@ -8,11 +8,11 @@ option3="monitor eDP-1 primary"
 option4="monitor DP-1 primary"
 option5="redshift on"
 option6="redshift off"
-option7="monitor DP-1 same as eDP-1"
-option8="monitor DP-1 right of eDP-1"
-option9="monitor DP-1 left of eDP-1"
-option10="monitor DP-1 above eDP-1"
-option11="monitor DP-1 below eDP-1"
+option7="monitor eDP-1 same as DP-1"
+option8="monitor eDP-1 right of DP-1"
+option9="monitor eDP-1 left of DP-1"
+option10="monitor eDP-1 above DP-1"
+option11="monitor eDP-1 below DP-1"
 option12="rotate monitor DP-1 right"
 option13="rotate monitor DP-1 left"
 option14="rotate monitor DP-1 normal"
@@ -37,15 +37,15 @@ case $selected in
 	$option6)
 		redshift -x;;
     $option7)
-        xrandr --output DP-1 --same-as eDP-1;;
+        xrandr --output eDP-1 --same-as DP-1;;
     $option8)
-        xrandr --output DP-1 --right-of eDP-1;;
+        xrandr --output eDP-1 --primary --right-of DP-1;;
     $option9)
-        xrandr --output DP-1 --left-of eDP-1;;
+        xrandr --output eDP-1 --primary --left-of DP-1;;
     $option10)
-        xrandr --output DP-1 --above eDP-1;;
+        xrandr --output eDP-1 --primary --above DP-1;;
     $option11)
-        xrandr --output DP-1 --below eDP-1;;
+        xrandr --output eDP-1 --primary --below DP-1;;
     $option12)
         xrandr --output DP-1 --rotate left;;
     $option13)
