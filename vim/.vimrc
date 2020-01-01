@@ -13,7 +13,11 @@ call plug#begin('~/vim/plugged')
 		let g:UltiSnipsJumpForwardTrigger = '<tab>'
 		let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 	Plug 'lervag/vimtex'
-	    set conceallevel=0
+		let g:tex_flavor='latex'
+		let g:vimtex_view_method='zathura'
+	    let g:vimtex_quickfix_mode=0
+	Plug 'KeitaNakamura/tex-conceal.vim'
+	    set conceallevel=1
 	    let g:tex_conceal='abdmg'
 	Plug 'vim-airline/vim-airline'
 		let g:airline_powerline_fonts = 1

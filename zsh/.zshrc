@@ -5,6 +5,10 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mcramer/.oh-my-zsh"
 
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -102,13 +106,14 @@ source $ZSH/oh-my-zsh.sh
 ###############################################################################
 # list commands
 alias la='ls -A'
-alias l='ls -CF'
+alias l='exa -l --color=always'
 alias lt='exa -T'
 alias ll='exa --color=always -alh'
 alias gs='git status'
 alias ga='git add'
 alias gst='git stage'
 alias gcm='git commit -m'
+alias gc='git clone'
 alias gp='git push'
 alias gpu='git pull'
 alias gd='git diff'
@@ -123,7 +128,7 @@ alias btoff='rfkill block bluetooth'
 alias wifion='rfkill unblock wifi'
 alias wifioff='rfkill block wifi'
 alias i3lock='i3lock -c 4e566a -n'
-alias battery='wifioff && btoff && sudo tlp bat && sudo powertop --auto-tune && fanoff'
+alias battery='sudo tlp bat && sudo powertop --auto-tune && fanoff'
 alias fanoff='echo level 0 | sudo tee /proc/acpi/ibm/fan'
 alias fanlow='echo level 2 | sudo tee /proc/acpi/ibm/fan'
 alias fanmed='echo level 4 | sudo tee /proc/acpi/ibm/fan'
@@ -131,9 +136,6 @@ alias fanhigh='echo level 7 | sudo tee /proc/acpi/ibm/fan'
 alias fanauto='echo level auto | sudo tee /proc/acpi/ibm/fan'
 alias gotop='gotop-cjbassi -c vice'
 alias e='exit'
-alias linux-drive='sudo mount -t ext4 -o rw /dev/sda1 /media/mcramer/linux-drive'
-alias linux-drive-2='sudo mount -t ext4 -o rw /dev/sda1 /media/mcramer/linux-drive-2'
-alias pass='bash && pass'
 function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzner.de/"$1".bin && rm ~/Documents/misc/speedtest/*; }
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }

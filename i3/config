@@ -188,7 +188,7 @@ bindsym F8 exec networkmenu
 bindsym F10 exec scrotmenu
 bindsym Mod1+Shift+d move scratchpad
 bindsym Mod1+d scratchpad show
-bindsym Mod1+l exec i3lock -c 4e566a -n
+# bindsym Mod1+l exec i3lock -c 4e566a -n
 #
 # VOLUME CONTROL
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 2%+ unmute
@@ -200,27 +200,20 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
-<<<<<<< HEAD
-exec_always --no-startup-id feh --bg-scale ~/Pictures/walls/Blade-Runner-2049-frame-4k-260.jpg
+exec --no-startup-id watch -n 300 feh --randomize --bg-fill ~/Pictures/walls/br2049/*
 exec_always --no-startup-id polybar main
-=======
-exec_always --no-startup-id feh --bg-scale Pictures/walls/br2049/Blade-Runner-2049-frame-4k-260.jpg
-exec_always --no-startup-id polybar main
-exec_always --no-startup-id xrandr --output DP-1 --same-as eDP-1
-exec_always --no-startup-id konsole
-exec_always --no-startup-id linux-drive
->>>>>>> 28286a21dc0f732e706bc455811ed7788615ab52
+exec --no-startup-id konsole
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
-new_window 1pixel
+default_border pixel 1
 #
 # Workspace Assignments
 assign [class="Spotify"] 4
 assign [class="Keepassx2"] 5
 #
 # COLORS
-client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #3b4252
+client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #8fbcbb
 client.focused_inactive #2e3440 #2e3440 #e5e9f0 #5e81ac #2e3440
 client.unfocused #2e3440 #2e3440 #eceff4 #2e3440 #2e3440
 client.urgent #bf616a #2e3440 #e5e9f0 #bf616a #bf616a
