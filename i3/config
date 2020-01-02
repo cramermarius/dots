@@ -202,6 +202,7 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 # STARTUP RUN
 exec --no-startup-id watch -n 300 feh --randomize --bg-fill ~/Pictures/walls/br2049/*
 exec_always --no-startup-id polybar main
+#exec --no-startup-id polybar main
 exec --no-startup-id konsole
 #
 # WINDOW CONFIGS
@@ -210,7 +211,7 @@ default_border pixel 1
 #
 # Workspace Assignments
 assign [class="Spotify"] 4
-assign [class="Keepassx2"] 5
+assign [class="KeePassXC"] 5
 #
 # COLORS
 client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #8fbcbb
