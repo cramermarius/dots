@@ -246,7 +246,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT1
 adapter = AC
-full-at = 98
+full-at = 99
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.background}
@@ -274,6 +274,10 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
+
+label-charging = + %percentage%%
+label-discharging = - %percentage%%
+label-full = Fully charged
 
 [module/powermenu]
 type = custom/menu

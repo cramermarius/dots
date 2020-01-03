@@ -200,7 +200,7 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
-exec --no-startup-id watch -n 300 feh --randomize --bg-fill ~/Pictures/walls/br2049/*
+exec --no-startup-id watch -n 500 feh --randomize --bg-fill ~/Pictures/walls/br2049/*
 exec_always --no-startup-id polybar main
 #exec --no-startup-id polybar main
 exec --no-startup-id konsole
@@ -210,6 +210,9 @@ focus_follows_mouse no # change window focus with mouse movement?
 default_border pixel 1
 #
 # Workspace Assignments
+assign [class="Konsole"] 1
+assign [class="Firefox"] 2
+assign [class="Discord"] 3
 assign [class="Spotify"] 4
 assign [class="KeePassXC"] 5
 #

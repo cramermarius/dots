@@ -134,8 +134,11 @@ alias fanlow='echo level 2 | sudo tee /proc/acpi/ibm/fan'
 alias fanmed='echo level 4 | sudo tee /proc/acpi/ibm/fan'
 alias fanhigh='echo level 7 | sudo tee /proc/acpi/ibm/fan'
 alias fanauto='echo level auto | sudo tee /proc/acpi/ibm/fan'
+alias fanstat="< /proc/acpi/ibm/fan | awk '/^level:/ {print $2}'"
+alias fanspeed="< /proc/acpi/ibm/fan | awk '/^speed:/ {print $2}'"
 alias gotop='gotop-cjbassi -c vice'
 alias e='exit'
+alias cal='cal -m'
 function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzner.de/"$1".bin && rm ~/Documents/misc/speedtest/*; }
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
