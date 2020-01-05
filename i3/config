@@ -182,9 +182,8 @@ bindsym Mod4+Return exec konsole
 bindsym Control+space exec firefox
 bindsym Mod4+Shift+x exec powermenu
 bindsym Mod1+l exec i3lock -c 4c566a -n
-bindsym F7 exec xrandrmenu
-bindsym Control+F7 exec i3layoutmenu
-bindsym F8 exec networkmenu
+bindsym Control+F9 exec xrandrmenu
+bindsym F9 exec networkmenu
 bindsym F10 exec scrotmenu
 bindsym Mod1+Shift+d move scratchpad
 bindsym Mod1+d scratchpad show

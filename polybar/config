@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio backlight mem cpu wlan eth battery bat
+modules-right = pulseaudio backlight mem cpu wlan eth battery
 
 tray-position = right
 tray-padding = 2
@@ -277,7 +277,7 @@ animation-discharging-framerate = 750
 
 label-charging = + %percentage%%
 label-discharging = - %percentage%%
-label-full = Fully charged
+label-full = %percentage%%
 
 [module/powermenu]
 type = custom/menu
