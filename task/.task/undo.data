@@ -1,0 +1,165 @@
+time 1578501093
+new [description:"1" entry:"1578501093" modified:"1578501093" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+---
+time 1578501253
+old [description:"1" entry:"1578501093" modified:"1578501093" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+new [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579474800" entry:"1578501093" modified:"1578501253" project:"school" scheduled:"1578956400" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+---
+time 1578584981
+new [description:"e" entry:"1578584981" modified:"1578584981" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578584985
+new [description:"e" entry:"1578584985" modified:"1578584985" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+---
+time 1578585390
+old [description:"e" entry:"1578584981" modified:"1578584981" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+new [description:"PH" entry:"1578584981" modified:"1578585390" project:"school" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578585441
+old [description:"PH" entry:"1578584981" modified:"1578585390" project:"school" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+new [description:"&open;PH&close; HA" due:"1578610800" entry:"1578584981" modified:"1578585441" project:"school" scheduled:"1578524400" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578585603
+old [description:"e" entry:"1578584985" modified:"1578584985" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+new [description:"&open;MA&close; prepare for test" due:"1579129200" entry:"1578584985" modified:"1578585603" project:"school" scheduled:"1579042800" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+---
+time 1578585728
+old [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579474800" entry:"1578501093" modified:"1578501253" project:"school" scheduled:"1578956400" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+new [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579502700" entry:"1578501093" modified:"1578585728" project:"school" scheduled:"1579006800" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+---
+time 1578585759
+old [description:"&open;PH&close; HA" due:"1578610800" entry:"1578584981" modified:"1578585441" project:"school" scheduled:"1578524400" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+new [description:"&open;PH&close; HA" due:"1578638700" entry:"1578584981" modified:"1578585759" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578585785
+old [description:"&open;MA&close; prepare for test" due:"1579129200" entry:"1578584985" modified:"1578585603" project:"school" scheduled:"1579042800" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+new [description:"&open;MA&close; prepare for test" due:"1579170900" entry:"1578584985" modified:"1578585785" project:"school" scheduled:"1579100400" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+---
+time 1578585793
+new [description:"e" entry:"1578585793" modified:"1578585793" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+---
+time 1578585930
+old [description:"e" entry:"1578585793" modified:"1578585793" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+new [description:"&open;SEMI&close; thesenpapier vorbereiten" due:"1579262400" entry:"1578585793" modified:"1578585930" project:"semi" scheduled:"1578927600" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+---
+time 1578586090
+old [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579502700" entry:"1578501093" modified:"1578585728" project:"school" scheduled:"1579006800" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+new [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579502700" entry:"1578501093" modified:"1578586090" priority:"H" project:"school" scheduled:"1579006800" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+---
+time 1578586103
+old [description:"&open;PH&close; HA" due:"1578638700" entry:"1578584981" modified:"1578585759" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+new [description:"&open;PH&close; HA" due:"1578638700" entry:"1578584981" modified:"1578586103" priority:"M" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578586113
+old [description:"&open;MA&close; prepare for test" due:"1579170900" entry:"1578584985" modified:"1578585785" project:"school" scheduled:"1579100400" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+new [description:"&open;MA&close; prepare for test" due:"1579170900" entry:"1578584985" modified:"1578586113" priority:"H" project:"school" scheduled:"1579100400" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+---
+time 1578586126
+old [description:"&open;SEMI&close; thesenpapier vorbereiten" due:"1579262400" entry:"1578585793" modified:"1578585930" project:"semi" scheduled:"1578927600" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+new [description:"&open;SEMI&close; thesenpapier vorbereiten" due:"1579262400" entry:"1578585793" modified:"1578586126" priority:"H" project:"semi" scheduled:"1578927600" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+---
+time 1578586232
+old [description:"&open;PH&close; HA" due:"1578638700" entry:"1578584981" modified:"1578586103" priority:"M" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+new [description:"&open;PH&close; HA" entry:"1578584981" modified:"1578586232" priority:"M" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578586252
+old [description:"&open;PH&close; HA" entry:"1578584981" modified:"1578586232" priority:"M" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+new [description:"&open;PH&close; HA" due:"1578638700" entry:"1578584981" modified:"1578586252" priority:"M" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578587319
+new [description:"&open;GES&close; HA" due:"1579157100" entry:"1578587319" modified:"1578587319" status:"pending" uuid:"f48a0c48-318e-4891-b78e-a4d729fb1f46"]
+---
+time 1578587356
+old [description:"&open;GES&close; HA" due:"1579157100" entry:"1578587319" modified:"1578587319" status:"pending" uuid:"f48a0c48-318e-4891-b78e-a4d729fb1f46"]
+new [description:"&open;GES&close; HA" due:"1579157100" end:"1578587353" entry:"1578587319" modified:"1578587356" status:"deleted" uuid:"f48a0c48-318e-4891-b78e-a4d729fb1f46"]
+---
+time 1578587416
+new [description:"&open;GES&close; HA" due:"1579157100" entry:"1578587416" modified:"1578587416" scheduled:"1579100400" status:"pending" uuid:"068706f1-a31b-45c1-8536-de539aae0c89"]
+---
+time 1578587447
+old [description:"&open;GES&close; HA" due:"1579157100" entry:"1578587416" modified:"1578587416" scheduled:"1579100400" status:"pending" uuid:"068706f1-a31b-45c1-8536-de539aae0c89"]
+new [description:"&open;GES&close; HA" due:"1579157100" entry:"1578587416" modified:"1578587447" priority:"L" project:"school" scheduled:"1579100400" status:"pending" uuid:"068706f1-a31b-45c1-8536-de539aae0c89"]
+---
+time 1578636602
+old [description:"&open;PH&close; HA" due:"1578638700" entry:"1578584981" modified:"1578586252" priority:"M" project:"school" scheduled:"1578589200" status:"pending" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+new [description:"&open;PH&close; HA" due:"1578638700" end:"1578636602" entry:"1578584981" modified:"1578636602" priority:"M" project:"school" scheduled:"1578589200" status:"completed" uuid:"3649df41-2941-4f84-8ba7-e11a88696b6d"]
+---
+time 1578639274
+new [description:"&open;PER&close; aufräumen" due:"1578751200" entry:"1578639274" modified:"1578639274" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"73d1e6d5-4a19-4e5f-a024-bad4775bdfed"]
+---
+time 1578639329
+new [description:"&open;PER&close; saugen" due:"1578751200" entry:"1578639329" modified:"1578639329" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"64f3822a-07bf-469f-b9fc-daaa973c588d"]
+---
+time 1578639360
+new [description:"&open;PER&close; füller umfüllen" due:"1578751200" entry:"1578639360" modified:"1578639360" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"c35466cc-c3b3-4632-9c37-4f56db320f82"]
+---
+time 1578771641
+old [description:"&open;PER&close; aufräumen" due:"1578751200" entry:"1578639274" modified:"1578639274" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"73d1e6d5-4a19-4e5f-a024-bad4775bdfed"]
+new [description:"&open;PER&close; aufräumen" due:"1578826800" entry:"1578639274" modified:"1578771641" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"73d1e6d5-4a19-4e5f-a024-bad4775bdfed"]
+---
+time 1578771655
+old [description:"&open;PER&close; saugen" due:"1578751200" entry:"1578639329" modified:"1578639329" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"64f3822a-07bf-469f-b9fc-daaa973c588d"]
+new [description:"&open;PER&close; saugen" due:"1578819600" entry:"1578639329" modified:"1578771655" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"64f3822a-07bf-469f-b9fc-daaa973c588d"]
+---
+time 1578771666
+old [description:"&open;PER&close; aufräumen" due:"1578826800" entry:"1578639274" modified:"1578771641" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"73d1e6d5-4a19-4e5f-a024-bad4775bdfed"]
+new [description:"&open;PER&close; aufräumen" due:"1578819600" entry:"1578639274" modified:"1578771666" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"73d1e6d5-4a19-4e5f-a024-bad4775bdfed"]
+---
+time 1578771677
+old [description:"&open;PER&close; füller umfüllen" due:"1578751200" entry:"1578639360" modified:"1578639360" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"c35466cc-c3b3-4632-9c37-4f56db320f82"]
+new [description:"&open;PER&close; füller umfüllen" due:"1578819600" entry:"1578639360" modified:"1578771677" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"c35466cc-c3b3-4632-9c37-4f56db320f82"]
+---
+time 1578771868
+new [description:"&open;MA&close; AB\/17bc S.330\/5" due:"1578897900" entry:"1578771868" modified:"1578771868" priority:"H" project:"school" scheduled:"1578830400" status:"pending" uuid:"b1696111-4b02-4132-bdb9-01fcbc03cd29"]
+---
+time 1578771953
+new [description:"&open;PH&close; HA" due:"1579070700" entry:"1578771953" modified:"1578771953" priority:"H" project:"school" scheduled:"1578830400" status:"pending" uuid:"adb7e061-49f9-4588-8753-a4903aeba98d"]
+---
+time 1578772010
+old [description:"&open;PH&close; HA" due:"1579070700" entry:"1578771953" modified:"1578771953" priority:"H" project:"school" scheduled:"1578830400" status:"pending" uuid:"adb7e061-49f9-4588-8753-a4903aeba98d"]
+new [description:"&open;PH&close; HA" due:"1579070700" entry:"1578771953" modified:"1578772010" priority:"H" project:"school" scheduled:"1578916800" status:"pending" uuid:"adb7e061-49f9-4588-8753-a4903aeba98d"]
+---
+time 1578772185
+old [description:"&open;SEMI&close; thesenpapier vorbereiten" due:"1579262400" entry:"1578585793" modified:"1578586126" priority:"H" project:"semi" scheduled:"1578927600" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+new [description:"&open;SEMI&close;" due:"1579028400" entry:"1578585793" modified:"1578772185" priority:"H" project:"semi" scheduled:"1578925800" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+---
+time 1578772362
+old [description:"&open;PH&close; HA" due:"1579070700" entry:"1578771953" modified:"1578772010" priority:"H" project:"school" scheduled:"1578916800" status:"pending" uuid:"adb7e061-49f9-4588-8753-a4903aeba98d"]
+new [description:"&open;PH&close; HA" due:"1579070700" entry:"1578771953" modified:"1578772362" priority:"H" project:"school" scheduled:"1578823200" status:"pending" uuid:"adb7e061-49f9-4588-8753-a4903aeba98d"]
+---
+time 1578772615
+old [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579502700" entry:"1578501093" modified:"1578586090" priority:"H" project:"school" scheduled:"1579006800" status:"pending" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a"]
+new [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579502700" entry:"1578501093" modified:"1578772615" priority:"H" project:"school" scheduled:"1579006800" status:"waiting" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a" wait:"1578956400"]
+---
+time 1578772668
+old [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579502700" entry:"1578501093" modified:"1578772615" priority:"H" project:"school" scheduled:"1579006800" status:"waiting" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a" wait:"1578956400"]
+new [description:"&open;MA&close; Vortrag Exponential\/Logarhythmusfkt\/-gleichung" due:"1579502700" entry:"1578501093" modified:"1578772668" priority:"H" project:"school" scheduled:"1579006800" status:"waiting" uuid:"0a618f89-676c-406c-b9d4-dd9cc1fe041a" wait:"1578870000"]
+---
+time 1578772688
+old [description:"&open;MA&close; prepare for test" due:"1579170900" entry:"1578584985" modified:"1578586113" priority:"H" project:"school" scheduled:"1579100400" status:"pending" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07"]
+new [description:"&open;MA&close; prepare for test" due:"1579170900" entry:"1578584985" modified:"1578772688" priority:"H" project:"school" scheduled:"1579100400" status:"waiting" uuid:"fdeefdc6-44ab-499a-b298-c81a9db12a07" wait:"1578956400"]
+---
+time 1578772714
+old [description:"&open;SEMI&close;" due:"1579028400" entry:"1578585793" modified:"1578772185" priority:"H" project:"semi" scheduled:"1578925800" status:"pending" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e"]
+new [description:"&open;SEMI&close;" due:"1579028400" entry:"1578585793" modified:"1578772714" priority:"H" project:"semi" scheduled:"1578925800" status:"waiting" uuid:"919b9e65-8dd5-4015-a31e-dfeaa0fe561e" wait:"1578783600"]
+---
+time 1578772737
+old [description:"&open;GES&close; HA" due:"1579157100" entry:"1578587416" modified:"1578587447" priority:"L" project:"school" scheduled:"1579100400" status:"pending" uuid:"068706f1-a31b-45c1-8536-de539aae0c89"]
+new [description:"&open;GES&close; HA" due:"1579157100" entry:"1578587416" modified:"1578772737" priority:"L" project:"school" scheduled:"1579100400" status:"waiting" uuid:"068706f1-a31b-45c1-8536-de539aae0c89" wait:"1578956400"]
+---
+time 1578772758
+old [description:"&open;PER&close; aufräumen" due:"1578819600" entry:"1578639274" modified:"1578771666" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"73d1e6d5-4a19-4e5f-a024-bad4775bdfed"]
+new [description:"&open;PER&close; aufräumen" due:"1578819600" entry:"1578639274" modified:"1578772758" priority:"M" project:"personal" scheduled:"1578672000" status:"waiting" uuid:"73d1e6d5-4a19-4e5f-a024-bad4775bdfed" wait:"1578524400"]
+---
+time 1578772771
+old [description:"&open;PER&close; saugen" due:"1578819600" entry:"1578639329" modified:"1578771655" priority:"M" project:"personal" scheduled:"1578672000" status:"pending" uuid:"64f3822a-07bf-469f-b9fc-daaa973c588d"]
+new [description:"&open;PER&close; saugen" due:"1578819600" entry:"1578639329" modified:"1578772771" priority:"M" project:"personal" scheduled:"1578672000" status:"waiting" uuid:"64f3822a-07bf-469f-b9fc-daaa973c588d" wait:"1578524400"]
+---
+time 1578772785
+old [description:"&open;MA&close; AB\/17bc S.330\/5" due:"1578897900" entry:"1578771868" modified:"1578771868" priority:"H" project:"school" scheduled:"1578830400" status:"pending" uuid:"b1696111-4b02-4132-bdb9-01fcbc03cd29"]
+new [description:"&open;MA&close; AB\/17bc S.330\/5" due:"1578897900" entry:"1578771868" modified:"1578772785" priority:"H" project:"school" scheduled:"1578830400" status:"waiting" uuid:"b1696111-4b02-4132-bdb9-01fcbc03cd29" wait:"1578697200"]
+---
+time 1578772797
+old [description:"&open;PH&close; HA" due:"1579070700" entry:"1578771953" modified:"1578772362" priority:"H" project:"school" scheduled:"1578823200" status:"pending" uuid:"adb7e061-49f9-4588-8753-a4903aeba98d"]
+new [description:"&open;PH&close; HA" due:"1579070700" entry:"1578771953" modified:"1578772797" priority:"H" project:"school" scheduled:"1578823200" status:"waiting" uuid:"adb7e061-49f9-4588-8753-a4903aeba98d" wait:"1578697200"]
+---

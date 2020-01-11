@@ -184,7 +184,7 @@ bindsym Mod4+Shift+x exec powermenu
 bindsym Mod1+l exec i3lock -c 4c566a -n
 bindsym Control+F9 exec xrandrmenu
 bindsym F9 exec networkmenu
-bindsym F10 exec scrotmenu
+bindsym F10 exec flameshot gui -p ~/Pictures/scrots/
 bindsym Mod1+Shift+d move scratchpad
 bindsym Mod1+d scratchpad show
 # bindsym Mod1+l exec i3lock -c 4e566a -n
@@ -193,8 +193,8 @@ bindsym Mod1+d scratchpad show
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 2%+ unmute
 #bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 2%- unmute
 #bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
-bindsym F3 exec pactl set-sink-volume 0 +2%
-bindsym F2 exec pactl set-sink-volume 0 -2%
+bindsym F3 exec pactl set-sink-volume 0 +5%
+bindsym F2 exec pactl set-sink-volume 0 -5%
 bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################

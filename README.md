@@ -3,7 +3,7 @@
 
 ## system settings
 ### appearance
-NOTE: put themes and icons in /usr/share/themes/ and /usr/share/icons/, respectively. 
+NOTE: put themes and icons in /usr/share/themes/ and /usr/share/icons/, respectively.
 Otherwise Inkscape and KeePassX won't adapt to GTK theme
 * Applications
 	* Nordic

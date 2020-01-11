@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio backlight mem cpu wlan eth battery
+modules-right = pulseaudio backlight mem cpu wlan eth battery bat
 
 tray-position = right
 tray-padding = 2
@@ -131,7 +131,7 @@ interval = 5
 [module/bat]
 type = custom/script
 exec = i3bat
-interval = 5
+interval = 10
 
 [module/wlan]
 type = internal/network

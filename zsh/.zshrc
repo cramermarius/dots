@@ -137,6 +137,7 @@ alias fanauto='echo level auto | sudo tee /proc/acpi/ibm/fan'
 alias fanstat="< /proc/acpi/ibm/fan | awk '/^level:/ {print $2}'"
 alias fanspeed="< /proc/acpi/ibm/fan | awk '/^speed:/ {print $2}'"
 alias gotop='gotop-cjbassi -c vice'
+alias bm='brightnessmenu'
 alias e='exit'
 alias cal='cal -m'
 function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzner.de/"$1".bin && rm ~/Documents/misc/speedtest/*; }
