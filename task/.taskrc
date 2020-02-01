@@ -29,18 +29,23 @@ include /usr/share/task/solarized-dark-256.theme
 #include /usr/share/task/solarized-light-256.theme
 #include /usr/share/task/no-color.theme
 
-# REPORT	
-# # LONG
+# By default, the week starts on Sunday, let's fix that.
+weekstart=monday
 
+list.all.projects=yes
+
+# Daily burndown
+alias.burndown=burndown.daily
+
+# REPORT	
 # # NEXT
-report.next.columns= id,priority,project,tags,recur.indicator,scheduled.relative,due.relative,until.remaining,description.count
+report.next.columns= id,priority,recur.indicator,scheduled.relative,due.relative,until.remaining,project,tags,description.count
 report.next.description= Most details of tasks
 report.next.filter= status:pending
-report.next.labels= ID,P,Project,Tags,R,Sched,Due,Until,Description
+report.next.labels= ID,P,R,Sched,Due,Until,Project,Tags,Description
 report.next.sort= scheduled+
 
 # # LS
-
 report.ls.columns= id,priority,project,tags,recur.indicator,scheduled,due,until.remaining,description.count
 report.ls.description= Most details of tasks
 report.ls.filter= status:pending
