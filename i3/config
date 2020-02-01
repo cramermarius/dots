@@ -181,7 +181,6 @@ bindsym Mod4+r mode "resize"
 bindsym Mod4+Return exec konsole
 bindsym Control+space exec firefox
 bindsym Mod4+Shift+x exec powermenu
-bindsym Mod1+l exec i3lock -c 4c566a -n
 bindsym Control+F9 exec xrandrmenu
 bindsym F9 exec networkmenu
 bindsym F10 exec flameshot gui -p ~/Pictures/scrots/
@@ -210,13 +209,12 @@ default_border pixel 1
 #
 # Workspace Assignments
 assign [class="Konsole"] 1
-assign [class="Firefox"] 2
 assign [class="Discord"] 3
 assign [class="Spotify"] 4
 assign [class="KeePassXC"] 5
 #
 # COLORS
-client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #8fbcbb
+client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #4c566a
 client.focused_inactive #2e3440 #2e3440 #e5e9f0 #5e81ac #2e3440
 client.unfocused #2e3440 #2e3440 #eceff4 #2e3440 #2e3440
 client.urgent #bf616a #2e3440 #e5e9f0 #bf616a #bf616a
