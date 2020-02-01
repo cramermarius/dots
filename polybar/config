@@ -56,8 +56,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = date
-modules-right = pulseaudio backlight mem cpu wlan eth battery bat
+modules-center =
+modules-right = pulseaudio backlight cpu wlan eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -175,8 +175,8 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "%Y-%m-%d"
-date-alt = " %Y-%m-%d"
+;date = "%Y-%m-%d"
+:date-alt = " %Y-%m-%d"
 
 time = %H:%M:%S
 time-alt = %H:%M:%S
@@ -190,8 +190,8 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <label-volume>
+label-volume = vol %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -275,8 +275,8 @@ animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
-label-charging = + %percentage%%
-label-discharging = - %percentage%%
+label-charging = +%percentage%%
+label-discharging = -%percentage%%
 label-full = %percentage%%
 
 [module/powermenu]
