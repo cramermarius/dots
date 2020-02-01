@@ -140,7 +140,7 @@ alias gotop='gotop-cjbassi -c vice'
 alias bm='brightnessmenu'
 alias e='exit'
 alias cal='cal -m'
-function speedtest() {cd ~/Documents/misc/speedtest && wget https://speed.hetzner.de/"$1".bin && rm ~/Documents/misc/speedtest/*; }
+alias speedtest='cd ~/Documents/misc/speedtest && wget http://speed.hetzner.de/100MB.bin && rm ~/Documents/misc/speedtest/*'
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
 function wttr.in() { curl wttr.in/~""$1""; }
@@ -148,3 +148,11 @@ alias protonc="sudo protonvpn connect -f"
 alias protond="sudo protonvpn disconnect"
 alias protons="protonvpn status"
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+
+function countdown(){
+   date1=$((`date +%s` + $1));
+   while [ "$date1" -ge `date +%s` ]; do
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
+}
