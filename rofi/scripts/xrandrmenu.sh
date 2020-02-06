@@ -22,7 +22,7 @@ options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$
 selected="$(echo -e "$options" | rofi -lines 14 -dmenu -p "xrandr")"
 case $selected in
     $option0)
-        xrandr --auto && killall polybar && polybar main && watch -n 500 feh --randomize --bg-fill ~/Pictures/walls/br2049/*;;
+        xrandr --auto && killall polybar && polybar main && feh --randomize --bg-fill ~/Pictures/walls/br2049/*;;
     $option1)
         xrandr --output eDP-1 --off;;
     $option2)
@@ -38,7 +38,7 @@ case $selected in
     $option7)
         xrandr --output DP-1 --left-of eDP-1;;
     $option8)
-        xrandr --output DP-1 --above eDP-1 && killall polybar && polybar main && watch -n 500 feh --randomize --bg-fill ~/Pictures/walls/br2049/*;;
+        xrandr --output DP-1 --above eDP-1 && killall polybar && polybar main && feh --randomize --bg-fill ~/Pictures/walls/br2049/*;;
 	$option9)
 		xrandr --output DP-1 --mode 1368x768_60.00 && xrandr --output DP-1 --above eDP-1 && killall polybar && polybar main;;
     $option10)
