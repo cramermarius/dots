@@ -198,7 +198,7 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
-exec --no-startup-id watch -n 500 feh --randomize --bg-fill ~/Pictures/walls/br2049/*
+exec_always --no-startup-id watch -n 500 feh --randomize --bg-fill ~/Pictures/walls/br2049/*
 exec_always --no-startup-id polybar main
 #exec --no-startup-id polybar main
 exec --no-startup-id konsole
