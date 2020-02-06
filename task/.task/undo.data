@@ -655,3 +655,11 @@ time 1580756071
 old [description:"waiting:2020-03-01" due:"1583217900" entry:"1580755373" modified:"1580755897" priority:"H" project:"&open;EN&close;" scheduled:"1583040600" status:"waiting" uuid:"f1a86c24-1d72-416e-b81b-aa675a8c1f7c" wait:"1583017200"]
 new [description:"Vorbereitung KA" due:"1583217900" entry:"1580755373" modified:"1580756071" priority:"H" project:"&open;EN&close;" scheduled:"1583040600" status:"waiting" uuid:"f1a86c24-1d72-416e-b81b-aa675a8c1f7c" wait:"1583017200"]
 ---
+time 1580997745
+old [description:"Kreativaufgabe" due:"1582022100" entry:"1580754741" modified:"1580755789" priority:"M" project:"&open;EN&close;" scheduled:"1580911200" status:"pending" uuid:"7902baf2-ecb5-4f84-8265-7252a8fd9bc5"]
+new [description:"Kreativaufgabe" due:"1582022100" entry:"1580754741" modified:"1580997745" priority:"M" project:"&open;EN&close;" scheduled:"1581004800" status:"pending" uuid:"7902baf2-ecb5-4f84-8265-7252a8fd9bc5"]
+---
+time 1580997764
+old [description:"Rezension" due:"1582108500" entry:"1580754812" modified:"1580755838" priority:"H" project:"&open;DE&close;" scheduled:"1580907600" status:"pending" uuid:"17547225-55d5-4252-9963-4f0131bbeeb2"]
+new [description:"Rezension" due:"1582108500" entry:"1580754812" modified:"1580997764" priority:"H" project:"&open;DE&close;" scheduled:"1581001200" status:"pending" uuid:"17547225-55d5-4252-9963-4f0131bbeeb2"]
+---
