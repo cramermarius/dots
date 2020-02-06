@@ -179,7 +179,7 @@ bindsym Mod4+r mode "resize"
 #
 # BINDINGS
 bindsym Mod4+Return exec konsole
-bindsym Control+space exec firefox
+bindsym Control+space exec brave-browser
 bindsym Mod4+Shift+x exec powermenu
 bindsym Control+F9 exec xrandrmenu
 bindsym F9 exec networkmenu
