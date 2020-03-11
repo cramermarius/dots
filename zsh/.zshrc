@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH:/var/lib/snapd/snap/bin
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/apps:$PATH:/var/lib/snapd/snap/bin
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Path to your oh-my-zsh installation.
