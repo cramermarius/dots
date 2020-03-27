@@ -51,6 +51,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-scripts/vim-auto-save'
 let g:auto_save = 1 "enable on startup
 let g:auto_save_in_insert_mode = 0
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'ervandew/supertab'
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 
