@@ -144,6 +144,7 @@ alias speedtest='cd ~/Documents/misc/speedtest && wget http://speed.hetzner.de/1
 function lmkc() { latexmk -pdf "$1"; }
 function lmkcc() { latexmk -pdf -pvc "$1"; }
 function wttr.in() { curl wttr.in/~""$1""; }
+function qtex() { vim ~/Desktop/"$1".tex; }
 alias protonc="sudo protonvpn connect -f"
 alias protond="sudo protonvpn disconnect"
 alias protons="protonvpn status"
