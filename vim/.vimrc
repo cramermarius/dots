@@ -9,50 +9,50 @@ endif
 "Vim-Plug configuration–––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 call plug#begin('~/vim/plugged')
 Plug 'sirver/ultisnips'
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+	let g:UltiSnipsExpandTrigger = '<tab>'
+	let g:UltiSnipsJumpForwardTrigger = '<tab>'
+	let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 Plug 'lervag/vimtex'
-let g:tex_flavor='latexmk'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
+	let g:tex_flavor='latexmk'
+	let g:vimtex_view_method='zathura'
+	let g:vimtex_quickfix_mode=0
 Plug 'KeitaNakamura/tex-conceal.vim'
-set conceallevel=2
-let g:tex_conceal='abdmg'
+	let g:tex_conceal='abdmg'
 Plug 'vim-airline/vim-airline'
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.readonly = ''
+	let g:airline_powerline_fonts = 1
+	if !exists('g:airline_symbols')
+		let g:airline_symbols = {}
+	endif
+	let g:airline_left_sep = ''
+	let g:airline_left_alt_sep = ''
+	let g:airline_right_sep = ''
+	let g:airline_right_alt_sep = ''
+	let g:airline_symbols.readonly = ''
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='ayu_mirage'
+	let g:airline_theme='ayu_mirage'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'flrnd/candid.vim'
 Plug 'junegunn/goyo.vim'
-let g:goyo_width = 105
-let g:goyo_height = 60
+	let g:goyo_width = 105
+	let g:goyo_height = 60
 Plug 'junegunn/limelight.vim'
-let g:limelight_default_coefficient = 1
-let g:limelight_conceal_ctermfg = 'gray'
+	let g:limelight_default_coefficient = 1
+	let g:limelight_conceal_ctermfg = 'gray'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
-let NERDTreeShowHidden = 0
-let NERDTreeQuitOnOpen = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+	let NERDTreeShowHidden = 0
+	let NERDTreeQuitOnOpen = 1
+	let NERDTreeMinimalUI = 1
+	let NERDTreeDirArrows = 1
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-scripts/vim-auto-save'
-let g:auto_save = 1 "enable on startup
-let g:auto_save_in_insert_mode = 0
+	let g:auto_save = 1 "enable on startup
+	let g:auto_save_in_insert_mode = 0
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'ervandew/supertab'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 
@@ -67,6 +67,7 @@ set tw=90
 set smartcase
 set ignorecase
 set hlsearch
+set conceallevel=2
 set nocursorline
 set foldmethod=syntax
 set foldnestmax=10
@@ -83,11 +84,13 @@ set spelllang=de
 syntax enable
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+set listchars=tab:\|\ "indentation lines
+set list
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
 " Theme–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-colorscheme wal
+colorscheme nord
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
