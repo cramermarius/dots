@@ -1,0 +1,20 @@
+type = custom/menu
+
+label-open = 終了
+label-open-background = ${colors.background}
+label-open-foreground = ${colors.primary}
+
+label-close =  
+label-close-foreground = ${colors.red}
+
+label-separator = "  "
+;label-separator-foreground = ${colors.foreground}
+
+menu-0-0 =  
+menu-0-0-exec = reboot
+menu-0-0-foreground = ${colors.green}
+
+menu-0-1 =  
+menu-0-1-exec = poweroff
+menu-0-1-foreground = ${colors.blue}
+

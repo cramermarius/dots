@@ -1,0 +1,32 @@
+color = ${colors.yellow}
+type = internal/xkeyboard
+
+; List of indicators to ignore
+; blacklist-0 = num lock
+; blacklist-1 = scroll lock
+
+; Available tags:
+;   <label-layout> (default)
+;   <label-indicator> (default)
+format = <label-layout> 
+;format-spacing = 0
+;format-underline = ${self.color}
+
+format-prefix = " "
+format-prefix-foreground = ${self.color}
+
+; Available tokens:
+;   %layout%
+;   %name%
+;   %number%
+; Default: %layout%
+label-layout = %layout%
+;label-layout-padding = 2
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-indicator = %name%
+;label-indicator-padding = 2
+;label-indicator-background = ${colors.primary}
+

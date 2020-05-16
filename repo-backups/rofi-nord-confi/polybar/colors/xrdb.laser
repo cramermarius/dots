@@ -1,0 +1,21 @@
+background = ${xrdb:background:#2a1e4b}
+background-alt = ${xrdb:color1:#b51f4a}
+
+foreground = ${xrdb:foreground:#3bacc3}
+foreground-alt = ${xrdb:background:#2a1e4b}
+
+back = ${xrdb:color0:#2a1e4b}
+dark_grey = ${xrdb:color8:#95939b}
+red = ${xrdb:color1:#b51f4a}
+green = ${xrdb:color2:#25b984}
+yellow = ${xrdb:color3:#f8c836}
+blue = ${xrdb:color4:#4296f5}
+purple = ${xrdb:color5:#ba4cbf}
+cyan = ${xrdb:color6:#3bacc3}
+gray = ${xrdb:color7:#d7ecf3}
+white = ${xrdb:color15:#f3f3f3}
+orange = ${xrdb:color16:#dc5001}
+
+primary = ${self.purple}
+secondary = ${self.cyan}
+urgent = ${self.red}

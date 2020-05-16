@@ -53,6 +53,8 @@ Plug 'vim-scripts/vim-auto-save'
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
+Plug '~/vim/plugged/atlantis-vim'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 

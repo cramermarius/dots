@@ -1,0 +1,50 @@
+color=${colors.yellow}
+type = custom/script
+
+; Available tokens:
+;   %counter%
+; Command to be executed (using "/usr/bin/env sh -c [command]")
+exec = ~/.config/polybar/custom/scripts/pa-switch.sh
+
+; Conditional command that, if defined, needs to exit successfully
+; before the main exec command is invoked.
+; Default: ""
+;exec-if = pgrep -x myservice
+
+; Will the script output continous content?
+; Default: false
+;tail = true
+
+; Seconds to sleep between updates
+; Default: 2 (0 if `tail = true`)
+interval = 1
+
+; Available tokens:
+;   %counter%
+;   %pid%
+;
+; "click-(left|middle|right)" will be executed using "/usr/bin/env sh -c [command]"
+click-left = ~/.config/polybar/custom/scripts/pa-switch.sh --next
+click-right = ~/.config/polybar/custom/scripts/pa-switch.sh --previous
+
+; Available tokens:
+;   %counter%
+;   %pid%
+;
+; "scroll-(up|down)" will be executed using "/usr/bin/env sh -c [command]"
+scroll-up = pamixer -i 3
+scroll-down = pamixer -d 3
+
+; Available tags:
+;   <output> - deprecated
+;   <label> (default)
+format = <label>
+format-foreground = ${self.color}
+;format-underline = ${self.color}
+format-padding-rigth = 0
+
+; Available tokens:
+;   %output%
+; Default: %output%
+label = %output%
+

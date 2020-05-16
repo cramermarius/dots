@@ -1,0 +1,51 @@
+color = ${colors.cyan}
+type = custom/script
+
+; Available tokens:
+;   %counter%
+; Command to be executed (using "/usr/bin/env sh -c [command]")
+exec = pamixer --get-volume
+
+; Conditional command that, if defined, needs to exit successfully
+; before the main exec command is invoked.
+; Default: ""
+;exec-if = pgrep -x myservice
+
+; Will the script output continous content?
+; Default: false
+;tail = true
+
+; Seconds to sleep between updates
+; Default: 2 (0 if `tail = true`)
+interval = 1
+
+; Available tags:
+;   <output> - deprecated
+;   <label> (default)
+format = <label>
+format-foreground = ${self.color}
+format-underline = ${self.color}
+format-padding-left = 0
+
+; Available tokens:
+;   %output%
+; Default: %output%
+label = %output%%
+label-padding = 0
+
+; Available tokens:
+;   %counter%
+;   %pid%
+;
+; "click-(left|middle|right)" will be executed using "/usr/bin/env sh -c [command]"
+click-left = pamixer --set-volume 0
+click-middle = pamixer --toggle-mute
+
+; Available tokens:
+;   %counter%
+;   %pid%
+;
+; "scroll-(up|down)" will be executed using "/usr/bin/env sh -c [command]"
+scroll-up = pamixer --increase 3
+scroll-down = pamixer --decrease 3
+

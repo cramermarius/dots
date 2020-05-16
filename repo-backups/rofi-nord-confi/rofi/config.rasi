@@ -1,0 +1,29 @@
+//----------------------
+// Configuration
+//----------------------
+
+configuration {
+    modi:               "drun,run,ssh";
+    cycle:              true;
+    show-match:         true;
+    show-icons:         true;
+    drun-icon-theme:    "Papirus";
+
+    matching:           "fuzzy";
+    
+    lines:              12;
+    columns:            2;
+    width:              650;
+    location:           0;
+    padding:            32;
+
+    terminal:           "termite";
+    ssh-command:        "{terminal} -e '{ssh-client} {host}'";
+
+    font:               "Fire Code Light 10";
+    separator-style:    "solid";
+    hide-scrollbar:     true;
+
+    theme:              "laser";
+}
+
