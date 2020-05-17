@@ -55,7 +55,7 @@ font-0 = Hasklug Nerd Font Mono:style=Regular:size=10;4
 
 modules-left = i3
 modules-center = activecourse
-modules-right = pulseaudio backlight cpu wlan eth battery date
+modules-right = pulseaudio custom-backlight cpu wlan eth battery date
 
 tray-position = right
 tray-padding = 2
@@ -138,6 +138,8 @@ exec = activecourse
 format = <label>
 label = %{F#d8dee9}%output%%{F#fff}
 interval = 15
+
+click-left = zathura ~/currentcourse/main.pdf
 
 [module/wlan]
 type = internal/network
@@ -288,7 +290,6 @@ label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
 
-
 [module/backlight]
 type = internal/backlight
 
@@ -297,6 +298,15 @@ label =  %percentage%%
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = intel_backlight
+
+[module/custom-backlight]
+type = custom/script
+exec = /home/mcramer/dots/polybar/scripts/custom-backlight.sh
+
+format = <label>
+label =  %output%
+interval = 0
+click-right = brightnessmenu
 
 [module/powermenu]
 type = custom/menu
