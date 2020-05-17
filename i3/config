@@ -195,8 +195,8 @@ bindsym Mod1+v exec zathura ~/currentcourse/main.pdf
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 2%+ unmute
 #bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 2%- unmute
 #bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
-bindsym F3 exec pactl set-sink-volume 0 +5%
-bindsym F2 exec pactl set-sink-volume 0 -5%
+bindsym F3 exec pactl set-sink-volume 0 +10%
+bindsym F2 exec pactl set-sink-volume 0 -10%
 bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
@@ -205,7 +205,6 @@ exec --no-startup-id watch -n 500 feh --randomize --bg-fill ~/Pictures/walls/br2
 exec_always --no-startup-id polybar main
 #exec --no-startup-id polybar main
 exec --no-startup-id konsole
-exec --no-startup-id coursesutil
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?

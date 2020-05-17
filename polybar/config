@@ -136,8 +136,8 @@ type = custom/script
 exec = activecourse
 
 format = <label>
-label = %{F#ebcb8b}%output%%{F#fff}
-interval = 1
+label = %{F#d8dee9}%output%%{F#fff}
+interval = 15
 
 [module/wlan]
 type = internal/network
