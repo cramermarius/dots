@@ -30,7 +30,7 @@ alert = #bf616a
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 25
+height = 28
 ;offset-x = 0%
 ;offset-y = 0%
 radius = 0.0
@@ -46,17 +46,15 @@ border-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 1
 
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = Hasklug Nerd Font Mono:style=Regular:size=10;4
 
 modules-left = i3
-modules-center =
+modules-center = activecourse
 modules-right = pulseaudio backlight cpu wlan eth battery date
 
 tray-position = right
@@ -90,7 +88,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 0
 label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.primary}
 
@@ -98,11 +96,11 @@ label-mode-background = ${colors.primary}
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.background}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -113,7 +111,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 ; Separator in between workspaces
 ; label-separator =
@@ -133,20 +131,27 @@ type = custom/script
 exec = i3bat
 interval = 10
 
+[module/activecourse]
+type = custom/script
+exec = activecourse
+
+format = <label>
+label = %{F#ebcb8b}%output%%{F#fff}
+interval = 1
+
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
 format-connected-underline = ${colors.background}
 label-connected = %essid%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -161,25 +166,25 @@ interface = enp0s25
 interval = 3.0
 
 format-connected-underline = ${colors.background}
-format-connected-prefix = " "
+format-connected = <label-connected>
+format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = disconnected
+label-disconnected-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
 interval = 1
 
-;date = "%Y-%m-%d"
-:date-alt = " %Y-%m-%d"
+date = "%m-%d"
+date-alt = "%a %Y-%m-%d"
 
-time = %H:%M:%S
-time-alt = %H:%M:%S
+time = "%H:%M"
+time-alt = "%H:%M:%S"
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -191,7 +196,7 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-label-volume = vol %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -251,33 +256,47 @@ full-at = 99
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.background}
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = "%{F#ddd} "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = %{F#ddd}
+ramp-capacity-1 = %{F#ddd}
+ramp-capacity-2 = %{F#ddd}
+ramp-capacity-3 = %{F#ddd}
+ramp-capacity-4 = %{F#ddd}
+ramp-capacity-5 = %{F#ddd}
+ramp-capacity-6 = %{F#ddd}
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = %{F#ddd}
+animation-charging-1 = %{F#ddd}
+animation-charging-2 = %{F#ddd}
+animation-charging-3 = %{F#ddd}
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 =
+animation-discharging-1 =
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
-label-charging = +%percentage%%
-label-discharging = -%percentage%%
+label-charging = %percentage%%
+label-discharging = %percentage%%
 label-full = %percentage%%
+
+
+[module/backlight]
+type = internal/backlight
+
+format = <label>
+label =  %percentage%%
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
 
 [module/powermenu]
 type = custom/menu
@@ -324,15 +343,33 @@ interval = 3
 
 [module/wired-network]
 type = internal/network
-interface = eth1
+interface = wlp3s0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = %essid%
+label-disconnected = disconnected
 
 [module/wireless-network]
 type = internal/network
-interface = wlan1
+interface = wlp3s0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = %essid%
+label-disconnected = disconnected
 
 [module/network]
 type = internal/network
-interface = wlan1
+interface = wlp3s0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = %essid%
+label-disconnected = disconnected
 
 ; Seconds to sleep between updates
 ; Default: 1
@@ -387,10 +424,3 @@ base-temperature = 20
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80
 warn-temperature = 60
-
-[module/backlight]
-type = internal/backlight
-
-; Use the following command to list available cards:
-; $ ls -1 /sys/class/backlight/
-card = intel_backlight
