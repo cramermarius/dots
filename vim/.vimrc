@@ -53,8 +53,8 @@ Plug 'vim-scripts/vim-auto-save'
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
-Plug '~/vim/plugged/atlantis-vim'
 Plug 'chriskempson/base16-vim'
+Plug 'cramermarius/forest-nord-vim', { 'branch': 'develop' }
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 
@@ -88,11 +88,12 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set listchars=tab:\|\ "indentation lines
 set list
+set termguicolors
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
 " Theme–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-colorscheme nord
+colorscheme forest-nord
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
