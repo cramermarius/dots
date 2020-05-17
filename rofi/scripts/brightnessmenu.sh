@@ -20,17 +20,17 @@ case $selected in
     $option0)
 		sudo bash -c "echo 0 > /sys/class/backlight/intel_backlight/brightness";;
 	$option1)
-		sudo bash -c "echo 5 > /sys/class/backlight/intel_backlight/brightness";;
+		sudo bash -c "echo 9 > /sys/class/backlight/intel_backlight/brightness";;
     $option2)
-		sudo bash -c "echo 42 > /sys/class/backlight/intel_backlight/brightness";;
+		sudo bash -c "echo 43 > /sys/class/backlight/intel_backlight/brightness";;
     $option3)
-        sudo bash -c "echo 85 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 86 > /sys/class/backlight/intel_backlight/brightness";;
     $option4)
-        sudo bash -c "echo 170 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 171 > /sys/class/backlight/intel_backlight/brightness";;
     $option5)
-        sudo bash -c "echo 340 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 341 > /sys/class/backlight/intel_backlight/brightness";;
 	$option6)
-        sudo bash -c "echo 511 > /sys/class/backlight/intel_backlight/brightness";;
+        sudo bash -c "echo 512 > /sys/class/backlight/intel_backlight/brightness";;
 	$option7)
         sudo bash -c "echo 682 > /sys/class/backlight/intel_backlight/brightness";;
 	$option8)
