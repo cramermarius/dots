@@ -133,7 +133,7 @@ interval = 10
 
 [module/course-message]
 type = custom/script
-exec = cat ~/.config/university-setup/course-message.txt
+exec = cat ~/repos/university-setup/course-message.txt
 
 format = <label>
 label = %output%
@@ -141,7 +141,7 @@ tail = true
 
 [module/short-message]
 type = custom/script
-exec = cat ~/.config/university-setup/short-message.txt
+exec = cat ~/repos/university-setup/short-message.txt
 
 format = <label>
 format-offset = 10
@@ -310,7 +310,7 @@ card = intel_backlight
 
 [module/custom-backlight]
 type = custom/script
-exec = /home/mcramer/dots/polybar/scripts/custom-backlight.sh
+exec = /home/mcramer/repos/dots/polybar/scripts/custom-backlight.sh
 
 format = <label>
 label =  %output%
