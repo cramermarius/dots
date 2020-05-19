@@ -24,5 +24,5 @@ case $chosen in
 	$option4)
 		rm ~/currentcourse && ln -s ~/university/bachelor-1/phy/ ~/currentcourse;;
 	$option5)
-		echo "" > ~/.config/university-setup/short-message.txt && echo "" > ~/.config/university-setup/course-message.txt;;
+		echo "" > ~/repos/university-setup/short-message.txt && echo "" > ~/repos/university-setup/course-message.txt;;
 esac
