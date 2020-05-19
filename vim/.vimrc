@@ -55,6 +55,8 @@ Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'chriskempson/base16-vim'
 Plug 'cramermarius/forest-nord-vim', { 'branch': 'develop' }
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+Plug 'tpope/vim-fugitive'
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 
