@@ -186,7 +186,7 @@ bindsym F9 exec networkmenu
 bindsym F10 exec flameshot gui -p ~/Pictures/scrots/
 bindsym Mod1+Shift+d move scratchpad
 bindsym Mod1+d scratchpad show
-bindsym Mod1+c exec ./apps/rofi-menus/scripts/tmp.sh
+bindsym Mod1+c exec ~/repos/dots/rofi/scripts/choose-course.sh
 bindsym Mod1+m exec konsole -e vim ~/currentcourse/main.tex
 bindsym Mod1+v exec zathura ~/currentcourse/main.pdf
 # bindsym Mod1+l exec i3lock -c 4e566a -n
@@ -204,7 +204,6 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 exec --no-startup-id watch -n 500 feh --randomize --bg-fill ~/Pictures/walls/br2049/*
 exec_always --no-startup-id polybar main
 #exec --no-startup-id polybar main
-exec --no-startup-id activecourse
 exec --no-startup-id konsole
 #
 # WINDOW CONFIGS
