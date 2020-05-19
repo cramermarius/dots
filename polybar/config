@@ -48,13 +48,13 @@ border-color = #00000000
 padding-left = 0
 padding-right = 1
 
-module-margin-left = 0
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = Hasklug Nerd Font Mono:style=Regular:size=10;4
 
-modules-left = i3
-modules-center = activecourse
+modules-left = i3 short-message
+modules-center = course-message
 modules-right = pulseaudio custom-backlight cpu wlan eth battery date
 
 tray-position = right
@@ -119,7 +119,7 @@ label-urgent-padding = 1
 [module/cpu]
 type = custom/script
 exec = i3cpu
-interval = 5
+interval = 15
 
 [module/mem]
 type = custom/script
@@ -131,15 +131,22 @@ type = custom/script
 exec = i3bat
 interval = 10
 
-[module/activecourse]
+[module/course-message]
 type = custom/script
-exec = activecourse
+exec = cat ~/.config/university-setup/course-message.txt
 
 format = <label>
-label = %{F#d8dee9}%output%%{F#fff}
-interval = 15
+label = %output%
+tail = true
 
-click-left = zathura ~/currentcourse/main.pdf
+[module/short-message]
+type = custom/script
+exec = cat ~/.config/university-setup/short-message.txt
+
+format = <label>
+format-offset = 10
+label = %output%
+tail = true
 
 [module/wlan]
 type = internal/network
@@ -149,6 +156,8 @@ interval = 3.0
 format-connected = <label-connected>
 format-connected-underline = ${colors.background}
 label-connected = %essid%
+
+click-left = networkmenu
 
 format-disconnected =
 format-disconnected-underline = ${self.format-connected-underline}
@@ -305,8 +314,8 @@ exec = /home/mcramer/dots/polybar/scripts/custom-backlight.sh
 
 format = <label>
 label =  %output%
-interval = 0
-click-right = brightnessmenu
+tail = true
+click-left = brightnessmenu
 
 [module/powermenu]
 type = custom/menu
@@ -315,7 +324,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = tt
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
