@@ -18,7 +18,7 @@ def math():
 endglobal
 
 snippet template "Basic template" b
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
 \input{/home/mcramer/university/preamble.tex}
 
 \title{$1}
@@ -26,13 +26,30 @@ snippet template "Basic template" b
 
 \begin{document}
 \maketitle
-\newpage
 \tableofcontents
-\newpage
 
-% Begin writing here
-$0
+
 \end{document}
+endsnippet
+
+snippet lect "lecture script" b
+\lecture{$1}{2020-$2}{$0}
+endsnippet
+
+snippet notebox "note box" b
+\begin{note}{$1}
+	$0
+\end{note}
+endsnippet
+
+snippet exer "\exercise" b
+\exercise{$1}
+$0
+endsnippet
+
+snippet subexer "\subexercise" b
+\subexercise{$1}
+$0
 endsnippet
 
 snippet beg "begin{} / end{}" bA
@@ -94,28 +111,6 @@ snippet table "Table environment" b
 	$0${5/((?<=.)c|l|r)|./(?1: & )/g}
 	\end{tabular}
 \end{table}
-endsnippet
-
-snippet note "note" b
-\begin{center}
-\fbox{\begin{minipage}{25em}
-\vspace{0.2em}
-\textbf{Notiz: $1}\\\
-$0
-\vspace{0.1em}
-\end{minipage}}
-\end{center}
-endsnippet
-
-snippet excercise "exercise" b
-\begin{center}
-\fbox{\begin{minipage}{25em}
-\vspace{0.2em}
-\textbf{Aufgabe: $1}\\\
-$0
-\vspace{0.1em}
-\end{minipage}}
-\end{center}
 endsnippet
 
 snippet fig "Figure environment" b

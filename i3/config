@@ -148,7 +148,7 @@ bindsym Mod4+Shift+r restart
 bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "RESIZE" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -172,7 +172,7 @@ mode "resize" {
         bindsym Mod1+r mode "default"
 }
 
-bindsym Mod4+r mode "resize"
+bindsym Mod4+r mode "RESIZE"
 #
 #####################################################################
 ## CUSTOM SETTINGS
@@ -186,9 +186,11 @@ bindsym F9 exec networkmenu
 bindsym F10 exec flameshot gui -p ~/Pictures/scrots/
 bindsym Mod1+Shift+d move scratchpad
 bindsym Mod1+d scratchpad show
-bindsym Mod1+c exec ~/repos/dots/rofi/scripts/choose-course.sh
+bindsym Mod1+c exec python ~/repos/university-setup/rofi-courses.py
 bindsym Mod1+m exec konsole -e vim ~/currentcourse/main.tex
-bindsym Mod1+v exec zathura ~/currentcourse/main.pdf
+bindsym Mod1+v exec python ~/repos/university-setup/rofi-lectures.py
+bindsym Mod1+l exec python ~/repos/university-setup/rofi-lectures-view.py
+bindsym Mod1+f exec inkscape-figures edit ~/currentcourse/figures/
 # bindsym Mod1+l exec i3lock -c 4e566a -n
 #
 # VOLUME CONTROL
