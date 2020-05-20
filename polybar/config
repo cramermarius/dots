@@ -141,6 +141,7 @@ tail = true
 type = custom/script
 tail = true
 exec = echo '/tmp/currentcourse' | entr cat /tmp/currentcourse
+click-left = konsole -e cd ~/currentcourse/
 
 [module/wlan]
 type = internal/network
