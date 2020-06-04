@@ -64,42 +64,43 @@ snippet ... "ldots" iA
 endsnippet
 
 snippet se "section" b
-\section{$1}
-$0
+\section{$0}
 endsnippet
 
 snippet sse "subsection" b
-\subsection{$1}
-$0
+\subsection{$0}
 endsnippet
 
 snippet ssse "subsubsection" b
-\subsubsection{$1}
-$0
+\subsubsection{$0}
 endsnippet
 
-snippet hs "hspace" b
-\hspace{$1} $0
+snippet sssse "subsubsubsubsection"
+\subsubsection*{$0}
 endsnippet
 
-snippet vs "vspace" b
-\vspace{$1} $0
+snippet hs "hspace"
+\hspace{$1}$0
 endsnippet
 
-snippet mt "math text" b
-\text{$1} $0
+snippet vs "vspace"
+\vspace{$1}$0
 endsnippet
 
-snippet it "italic" b
-\textit{$1} $0
+snippet mt "math text"
+\text{$1}$0
 endsnippet
 
-snippet bf "bold face" b
-\textbf{$1} $0
+snippet it "italic"
+\textit{$1}$0
 endsnippet
 
-snippet sc "small caps" b
-\textsc{$1} $0
+snippet bf "bold face"
+\textbf{$1}$0
+endsnippet
+
+snippet sc "small caps"
+\textsc{$1}$0
 endsnippet
 
 snippet table "Table environment" b
@@ -157,7 +158,7 @@ snippet =< "implied by" Ai
 endsnippet
 
 context "math()"
-snippet du "double underline" b
+snippet du "double underline"
 \doubleunderline{$1} $0
 endsnippet
 
@@ -182,7 +183,7 @@ endsnippet
 
 snippet dm "Math" wA
 \[
-${1:${VISUAL}}.
+${1:${VISUAL}}
 \]
 $0
 endsnippet
@@ -190,7 +191,7 @@ endsnippet
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 context "math()"
