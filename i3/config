@@ -39,6 +39,7 @@ bindsym Mod4+w kill
 
 # start rofi (a program launcher)
 bindsym Mod1+q exec rofi -show drun
+bindsym Mod1+Shift+q exec rofi -show run
 bindsym Mod1+w exec rofi -show window
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -178,7 +179,7 @@ bindsym Mod4+r mode "RESIZE"
 ## CUSTOM SETTINGS
 #
 # BINDINGS
-bindsym Mod4+Return exec konsole
+bindsym Mod4+Return exec gnome-terminal
 #bindsym Control+space exec firefox
 bindsym Mod4+Shift+x exec powermenu
 bindsym Control+F9 exec xrandrmenu
@@ -191,6 +192,7 @@ bindsym Mod1+m exec konsole -e vim ~/currentcourse/main.tex
 bindsym Mod1+v exec python ~/repos/university-setup/rofi-lectures.py
 bindsym Mod1+l exec python ~/repos/university-setup/rofi-lectures-view.py
 bindsym Mod1+f exec inkscape-figures edit ~/currentcourse/figures/
+bindsym Mod1+Shift+r exec polybarrestart
 # bindsym Mod1+l exec i3lock -c 4e566a -n
 #
 # VOLUME CONTROL
@@ -213,10 +215,8 @@ focus_follows_mouse no # change window focus with mouse movement?
 default_border pixel 1
 #
 # Workspace Assignments
-assign [class="Konsole"] 1
-assign [class="Discord"] 3
 assign [class="Spotify"] 4
-assign [class="KeePassXC"] 5
+assign [class="Inkscape"] 6
 #
 # COLORS
 client.focused #2e3440 #2e3440 #e5e9f0 #5e81ac #4c566a
