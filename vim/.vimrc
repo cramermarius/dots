@@ -51,12 +51,12 @@ Plug 'vim-scripts/vim-auto-save'
 	let g:auto_save = 1 "enable on startup
 	let g:auto_save_in_insert_mode = 0
 Plug 'severin-lemaignan/vim-minimap'
-Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'chriskempson/base16-vim'
 Plug 'cramermarius/forest-nord-vim', { 'branch': 'develop' }
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'tpope/vim-fugitive'
+Plug 'severin-lemaignan/vim-minimap'
 call plug#end()
 "––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––
 
@@ -65,7 +65,6 @@ call plug#end()
 set shiftwidth=4
 set tabstop=4
 set noexpandtab
-set showmatch
 set noshowmode
 set tw=90
 set smartcase
@@ -83,8 +82,8 @@ set hlsearch!
 set smartindent
 set autoindent
 filetype indent on
-set nospell
-set spelllang=de
+set spell
+set spelllang=de,en_gb
 syntax enable
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -135,6 +134,14 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 autocmd FileType gitcommit exec 'au VimEnter * startinsert'
 
+"Trailing whitespace highlighting-----------------------------------------------
+highlight ExtraWhitespace ctermbg=blue guibg=#BF616A
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 "Mappings–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 noremap <C-y> :tabn<CR>
 noremap <C-o> :Goyo<CR>
@@ -151,4 +158,6 @@ nmap <C-p> :set nonu norelativenumber <bar> :GitGutterDisable <bar> :se conceall
 nmap <S-p> :set nu relativenumber <bar> :GitGutterEnable <bar> :se conceallevel=2<CR>
 " au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x37 = Escape'
 " au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x37 = Control_L'
+" below: spellcheck correct last typo
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
