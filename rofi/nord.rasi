@@ -34,12 +34,12 @@
     active-foreground:           @foreground;
     selected-active-foreground:  @foreground;
     alternate-active-background: @nord0;
-    bordercolor:                 @nord7;
+    bordercolor:                 @nord0;
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     selected-normal-background:  @nord3;
     border-color:                @nord7;
-    spacing:                     2;
+    spacing:                     1;
     separatorcolor:              @blue;
     urgent-background:           @background;
     selected-urgent-background:  @nord3;
@@ -55,7 +55,7 @@
 }
 
 #mainbox {
-    border:  4;
+    border:  1;
     padding: 10;
 }
 
@@ -71,13 +71,13 @@
 
 #listview {
     fixed-height: 0;
-    padding:	  5 0 0;
+    padding:	  5 2 2;
     spacing:      5px ;
 }
 
 #element {
     border:  0;
-    padding: 8px ;
+    padding: 10px ;
 }
 
 #element.normal.normal {
