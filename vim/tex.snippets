@@ -79,16 +79,12 @@ snippet sssse "subsubsubsubsection"
 \subsubsection*{$0}
 endsnippet
 
-snippet hs "hspace"
+snippet hs "hspace" A
 \hspace{$1}$0
 endsnippet
 
-snippet vs "vspace"
+snippet vs "vspace" A
 \vspace{$1}$0
-endsnippet
-
-snippet mt "math text"
-\text{$1}$0
 endsnippet
 
 snippet it "italic"
@@ -192,6 +188,14 @@ snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
 \end{align*}
+endsnippet
+
+snippet eqs "equation system" bA
+\begin{equation*}
+\begin{split}
+	${1:${VISUAL}}
+\end{split}
+\end{equation*}
 endsnippet
 
 context "math()"

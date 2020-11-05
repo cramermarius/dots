@@ -37,8 +37,9 @@ Plug 'junegunn/goyo.vim'
 	let g:goyo_width = 105
 	let g:goyo_height = 60
 Plug 'junegunn/limelight.vim'
-	let g:limelight_default_coefficient = 1
-	let g:limelight_conceal_ctermfg = 'gray'
+	let g:limelight_default_coefficient = 0.6
+	let g:limelight_conceal_guifg = '#4c566a'
+	let g:limelight_paragraph_span = 0
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 	let NERDTreeShowHidden = 0
@@ -72,9 +73,7 @@ set ignorecase
 set hlsearch
 set conceallevel=2
 set nocursorline
-set foldmethod=syntax
-set foldnestmax=10
-set foldlevel=2
+set nofoldenable
 set relativenumber
 set number
 set encoding=UTF-8
@@ -107,6 +106,17 @@ augroup END
 "–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
+"–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+function! ToggleConcealLevel()
+    if &conceallevel == 0
+        setlocal conceallevel=2
+    else
+        setlocal conceallevel=0
+    endif
+endfunction
+"–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
 " NERDTree––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 " open NERDTree on default
 autocmd StdinReadPre * let s:std_in=1
@@ -116,16 +126,14 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Goyo functions–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 function! s:goyo_enter()
-	set number
-	set relativenumber
-	set showmode
-	set noshowcmd
+	se nu
+	se rnu
 	Limelight
 endfunction
 
 function! s:goyo_leave()
-	set number
-	set relativenumber
+	se nu
+	se rnu
 	Limelight!
 endfunction
 
@@ -147,13 +155,14 @@ noremap <C-y> :tabn<CR>
 noremap <C-o> :Goyo<CR>
 noremap <C-x> :NERDTreeToggle<CR>
 nnoremap <C-i> :set hlsearch!<CR>
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+nnoremap <C-l> :call ToggleConcealLevel()<CR>
+
 nmap <C-p> :set nonu norelativenumber <bar> :GitGutterDisable <bar> :se conceallevel=0<CR>
 nmap <S-p> :set nu relativenumber <bar> :GitGutterEnable <bar> :se conceallevel=2<CR>
 " au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x37 = Escape'
