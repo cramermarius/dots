@@ -205,11 +205,9 @@ bindsym F1 exec pactl set-sink-mute 0 toggle
 #
 ######################################################################
 # STARTUP RUN
-exec_always --no-startup-id polybar main
+exec --no-startup-id polybar main
 #exec --no-startup-id polybar main
-exec --no-startup-id konsole
-exec feh --bg-fill /home/mcramer/Pictures/film-scans/upload/roll-082/frame-0011.jpg
-exec --no-startup-id ibus-daemon
+exec --no-startup-id gnome-terminal
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
