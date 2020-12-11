@@ -81,7 +81,7 @@ set hlsearch!
 set smartindent
 set autoindent
 filetype indent on
-set spell
+set nospell
 set spelllang=de,en_gb
 syntax enable
 filetype plugin on
