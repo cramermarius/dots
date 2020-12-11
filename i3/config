@@ -1,4 +1,3 @@
-#
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -179,7 +178,7 @@ bindsym Mod4+r mode "RESIZE"
 ## CUSTOM SETTINGS
 #
 # BINDINGS
-bindsym Mod4+Return exec gnome-terminal
+bindsym Mod4+Return exec konsole
 #bindsym Control+space exec firefox
 bindsym Mod4+Shift+x exec powermenu
 bindsym Control+F9 exec xrandrmenu
@@ -203,11 +202,16 @@ bindsym F3 exec pactl set-sink-volume 0 +10%
 bindsym F2 exec pactl set-sink-volume 0 -10%
 bindsym F1 exec pactl set-sink-mute 0 toggle
 #
+# BRIGHTNESS CONTROL
+bindsym F5 exec light -U 5
+bindsym F6 exec light -A 5
+#
 ######################################################################
 # STARTUP RUN
-exec --no-startup-id polybar main
+exec_always polybar main --config=~/repos/dots/polybar/config
 #exec --no-startup-id polybar main
-exec --no-startup-id gnome-terminal
+exec konsole
+exec --no-startup-id feh --bg-scale ~/Pictures/walls/o7nizZ7.png
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
