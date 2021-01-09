@@ -18,19 +18,19 @@ options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$
 chosen="$(echo -e "$options" | rofi -lines 10 -dmenu -p "power")"
 case $chosen in
 	$option0)
-        systemctl suspend && i3lock -c 4c566a -n;;
+		systemctl suspend;;
     $option1)
-		sleep 600 && systemctl suspend && i3lock -c 4c566a -n;;
+		sleep 600 && systemctl suspend;;
     $option2)
-		sleep 1200 && systemctl suspend && i3lock -c 4c566a -n;;
+		sleep 1200 && systemctl suspend;;
 	$option3)
-		sleep 1800 && systemctl suspend && i3lock -c 4c566a -n;;
+		sleep 1800 && systemctl suspend;;
 	$option4)
-		sleep 2700 && systemctl suspend && i3lock -c 4c566a -n;;
+		sleep 2700 && systemctl suspend;;
 	$option5)
-		sleep 3600 && systemctl suspend && i3lock -c 4c566a -n;;
+		sleep 3600 && systemctl suspend;;
 	$option6)
-		i3lock -c 4c566a -n;;
+		betterlockscreen -l blur;;
 	$option7)
         i3-msg exit;;
     $option8)
