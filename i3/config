@@ -208,7 +208,7 @@ bindsym F6 exec light -A 5
 #
 ######################################################################
 # STARTUP RUN
-exec_always polybar main --config=~/repos/dots/polybar/config
+exec_always polybar -r main --config=~/repos/dots/polybar/config
 #exec --no-startup-id polybar main
 exec konsole
 exec --no-startup-id feh --bg-scale ~/Pictures/walls/o7nizZ7.png
