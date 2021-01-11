@@ -140,7 +140,7 @@ tail = true
 [module/currentcourse]
 type = custom/script
 exec = echo '/home/mcramer/repos/university-setup/currentcourse' | entr cat '/home/mcramer/repos/university-setup/currentcourse'
-click-left = gnome-terminal --working-directory=/home/mcramer/currentcourse/
+click-left = gnome-terminal --working-directory=/home/mcramer/currentcourse/ &
 tail = true
 
 [module/pomodoro]
@@ -312,7 +312,7 @@ exec = /home/mcramer/repos/dots/polybar/scripts/custom-backlight.sh
 
 format = <label>
 label =  %output%
-click-left = brightnessmenu
+click-left = brightnessmenu &
 tail = true
 
 [module/powermenu]
