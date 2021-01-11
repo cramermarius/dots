@@ -30,7 +30,7 @@ case $chosen in
 	$option5)
 		sleep 3600 && systemctl suspend;;
 	$option6)
-		betterlockscreen -l blur;;
+		betterlockscreen -l dimblur;;
 	$option7)
         i3-msg exit;;
     $option8)
