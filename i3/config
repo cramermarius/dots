@@ -208,10 +208,10 @@ bindsym F6 exec light -A 5
 #
 ######################################################################
 # STARTUP RUN
-exec_always polybar -r main --config=~/repos/dots/polybar/config
-#exec --no-startup-id polybar main
+exec polybar -r main --config=~/repos/dots/polybar/config
 exec konsole
 exec --no-startup-id feh --bg-scale ~/Pictures/walls/o7nizZ7.png
+exec light -N 0.2
 #
 # WINDOW CONFIGS
 focus_follows_mouse no # change window focus with mouse movement?
@@ -219,6 +219,7 @@ default_border pixel 1
 #
 # Workspace Assignments
 assign [class="Spotify"] 4
+assign [class="KeePassXC"] 5
 assign [class="Inkscape"] 6
 #
 # COLORS
