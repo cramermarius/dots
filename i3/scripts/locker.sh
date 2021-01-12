@@ -1,3 +1,3 @@
 #!/bin/bash
 
-betterlockscreen -l dimblur
+betterlockscreen -l blur
