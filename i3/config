@@ -181,7 +181,7 @@ bindsym Mod4+r mode "RESIZE"
 bindsym Mod4+Return exec konsole
 #bindsym Control+space exec firefox
 bindsym Mod4+Shift+x exec powermenu
-bindsym Mod4+Shift+l exec betterscreenlocker -l blur
+bindsym Mod1+Shift+l exec betterlockscreen -l blur
 bindsym Control+F9 exec xrandrmenu
 bindsym F9 exec networkmenu
 bindsym F10 exec flameshot gui -p ~/Pictures/scrots/
