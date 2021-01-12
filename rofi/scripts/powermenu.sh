@@ -7,15 +7,14 @@ option2="scheduled suspend (20min)"
 option3="scheduled suspend (30min)"
 option4="scheduled suspend (45min)"
 option5="scheduled suspend (60min)"
-option6="lock"
-option7="logout"
-option8="reboot"
-option9="shutdown"
+option6="logout"
+option7="reboot"
+option8="shutdown"
 
 # options passed into variable
-options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$option7\n$option8\n$option9"
+options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5\n$option6\n$option7\n$option8"
 
-chosen="$(echo -e "$options" | rofi -lines 10 -dmenu -p "power")"
+chosen="$(echo -e "$options" | rofi -lines 9 -dmenu -p "power")"
 case $chosen in
 	$option0)
 		systemctl suspend;;
@@ -30,11 +29,9 @@ case $chosen in
 	$option5)
 		sleep 3600 && systemctl suspend;;
 	$option6)
-		betterlockscreen -l dimblur;;
-	$option7)
         i3-msg exit;;
-    $option8)
+    $option7)
         systemctl reboot;;
-	$option9)
+	$option8)
         systemctl poweroff;;
 esac
