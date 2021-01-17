@@ -38,7 +38,7 @@ case $selected in
     $option7)
         xrandr --output DP-1 --left-of eDP-1;;
     $option8)
-        xrandr --output DP-1 --above eDP-1 && killall polybar && polybar main && feh --randomize --bg-fill ~/Pictures/walls/br2049/*;;
+        xrandr --output DP-1 --above eDP-1 && feh --bg-scale ~/Pictures/walls/o7nizZ7.png;;
 	$option9)
 		xrandr --output DP-1 --mode 1368x768_60.00 && xrandr --output DP-1 --above eDP-1 && killall polybar && polybar main;;
     $option10)
