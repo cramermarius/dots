@@ -192,7 +192,7 @@ bindsym Mod1+m exec konsole -e vim ~/currentcourse/main.tex
 bindsym Mod1+v exec python ~/repos/university-setup/rofi-lectures.py
 bindsym Mod1+l exec python ~/repos/university-setup/rofi-lectures-view.py
 bindsym Mod1+f exec inkscape-figures edit ~/currentcourse/figures/
-bindsym Mod1+Shift+r exec polybarrestart
+bindsym Mod1+Shift+r exec polybar_restart
 # bindsym Mod1+l exec i3lock -c 4e566a -n
 #
 # VOLUME CONTROL
