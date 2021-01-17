@@ -57,6 +57,7 @@ call plug#end()
 
 
 "vim settings–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+set tabstop=4
 set noshowmode
 set tw=90
 set ignorecase
